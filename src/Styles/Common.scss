@@ -1,0 +1,28 @@
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+@import "./Reset.scss";
+
+$high-yellow: #ffd014;
+$bg-gray: #f6f6f6;
+$font-black: #000;
+$font-purple: #6d3afb;
+$border-gray: 1px solid #ebebeb;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+html {
+  font-size: 10px;
+
+  body {
+    font-family: "NanumBarunGothic", sans-serif;
+  }
+}
