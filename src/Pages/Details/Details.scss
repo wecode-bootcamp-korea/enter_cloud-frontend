@@ -31,16 +31,17 @@
         align-items: center;
         height: 41px;
         margin-bottom: 39px;
+
         li {
+          height: 29px;
           margin: 6px 6px 6px 0;
           padding: 0 15px;
-          height: 29px;
-          font-size: 14px;
-          border-radius: 29px;
-          background-color: #fff;
-          border: 1px solid #e0e0e0;
-          color: #656565;
           text-align: center;
+          border-radius: 29px;
+          border: 1px solid #e0e0e0;
+          background-color: #fff;
+          font-size: 14px;
+          color: #656565;
           line-height: 29px;
         }
       }
@@ -53,8 +54,9 @@
       .text_box {
         width: 100%;
         height: 170px;
-        border-top: 1px;
         margin: 0 0 50px 0;
+        border-top: 1px;
+
         h3 {
           padding: 50px 100px 0 0;
           font-size: 48px;
@@ -68,37 +70,36 @@
     width: 100%;
 
     .list_click {
-      width: 100%;
-      height: 50px;
       display: flex;
       align-items: center;
+      width: 100%;
+      height: 50px;
 
       li {
-        padding: 11px 15px;
-        width: 127px;
-        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 127px;
+        height: 50px;
+        padding: 11px 15px;
         border-bottom: 1px solid #6d3afb;
         background-color: white;
 
         a {
-          background-color: white;
-          color: #656565;
-          font-size: 1.6rem;
           width: 97px;
           height: 18px;
+          right: -20px;
+          color: #656565;
+          font-size: 1.6rem;
           text-align: center;
           border-right: 1px solid #6d3afb;
-          right: -20px;
+          background-color: white;
         }
       }
     }
 
     .first_box {
       width: 100%;
-      height: 436px;
       margin: 0 0 50px 0;
       padding: 50px 0 0 0;
       border-top: 1px solid white;
@@ -117,6 +118,178 @@
         font-size: 1.6rem;
         font-weight: 300;
         line-height: 28px;
+      }
+
+      ul {
+        width: 100%;
+        margin: 35px 0 0 0;
+
+        li {
+          position: relative;
+          width: 100%;
+          height: 47px;
+          padding: 10px 0 8px 76px;
+          border-bottom: 1px solid #ebebeb;
+
+          .host_sub_time {
+            position: absolute;
+            left: 0;
+            font-size: 1.6rem;
+            line-height: 28px;
+          }
+
+          .host_time {
+            font-size: 1.6rem;
+            line-height: 28px;
+            color: #656565;
+          }
+
+          .host_sub_day {
+            position: absolute;
+            left: 0;
+            font-size: 1.6rem;
+            line-height: 28px;
+          }
+
+          .host_day {
+            font-size: 1.6rem;
+            line-height: 28px;
+            color: #656565;
+          }
+        }
+      }
+    }
+
+    .second_box {
+      width: 100%;
+      margin: 0 0 50px 0;
+      border-top: 1px solid white;
+
+      h4 {
+        width: 100%;
+        height: 46px;
+        margin: 70px 0 28px 0;
+        padding: 0 0 16px 0;
+        font-size: 1.8rem;
+        line-height: 30px;
+      }
+
+      ul {
+        width: 100%;
+        margin: 35px 0 0 0;
+
+        li {
+          position: relative;
+          width: 100%;
+          height: 37px;
+          padding: 0 0 8px 29px;
+          border-bottom: 1px solid #ebebeb;
+
+          .content_number {
+            position: absolute;
+            left: 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+
+          .content_text {
+            font-size: 1.6rem;
+            color: #656565;
+          }
+        }
+      }
+    }
+
+    .third_box {
+      width: 100%;
+      height: 627px;
+      margin: 0 0 50px 0;
+      padding: 50px 0 0 0;
+      border-top: 1px solid white;
+
+      h4 {
+        width: 100%;
+        height: 46px;
+        margin: 70px 0 28px 0;
+        padding: 0 0 16px 0;
+        font-size: 1.8rem;
+        line-height: 30px;
+      }
+
+      p {
+        height: 90px;
+        padding: 0 0 20px 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 28px;
+
+        em {
+          font: inherit;
+          color: red;
+        }
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          position: relative;
+          width: 100%;
+          height: 36px;
+          padding: 0 0 8px 29px;
+          border-bottom: 1px solid #ebebeb;
+
+          .refund_day {
+            position: absolute;
+            left: 0;
+            font-size: 1.6rem;
+            line-height: 28px;
+            color: #656565;
+          }
+
+          .refund_cost {
+            margin: 0 0 0 70px;
+            font-size: 1.6rem;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+
+    .map_box {
+      width: 100%;
+      height: 861px;
+      margin: 78px 0 0 0;
+      border-top: 1px solid #e0e0e0;
+
+      .map_text {
+        width: 100%;
+        height: 218px;
+        padding: 33px 30px 38px 30px;
+        background-color: white;
+
+        .map_title {
+          height: 26px;
+          padding: 0;
+          font-size: 2.4rem;
+          font-weight: bold;
+          background-color: white;
+        }
+
+        .map_adress {
+          height: 18px;
+          margin: 18px 0 0 0;
+          padding: 0;
+          font-size: 1.6rem;
+          line-height: -10px;
+          background-color: white;
+        }
+      }
+
+      .map_view {
+        width: 100%;
+        height: 643px;
+        border: 1px solid red;
       }
     }
   }

@@ -45,21 +45,59 @@ class Details extends React.Component {
                   보세요:)
                 </p>
                 <ul className="first_list">
-                  <li>
-                    <span></span>
+                  <li className="list">
+                    <span className="host_sub_time">영업시간</span>
+                    <span className="host_time">0~24시</span>
                   </li>
                   <li>
-                    <span></span>
+                    <span className="host_sub_day">휴무일</span>
+                    <span className="host_day">없음</span>
                   </li>
                 </ul>
               </div>
               <div className="second_box">
-                <h4>시설안내</h4>
+                <h4 className="second_subject">시설안내</h4>
                 <ul className="second_list">
-                  <li>123</li>
-                  <li>123</li>
-                  <li>123</li>
+                  <li>
+                    <span className="content_number">1</span>
+                    <span className="content_text">
+                      남녀 화장실, 테라스, 에스프레소 머신, 프로젝터, 4K 티비,
+                      각종 운동기구, 스피커, 냉장고, 냉동고, 오븐
+                    </span>
+                  </li>
                 </ul>
+              </div>
+              <div className="third_box">
+                <h4 className="third_subject">환불 규정</h4>
+                <p className="third_text">
+                  <em>
+                    이용당일(첫 날) 이후에 환불 관련 사항은 호스트에게 직접
+                    문의하셔야 합니다.
+                  </em>
+                  <br />
+                  결제 후 2시간 이내에는 100% 환불이 가능합니다.(단, 이용시간
+                  전까지만 가능)
+                </p>
+                <ul className="third_list">
+                  <li>
+                    <span className="refund_day">이용 8일 전</span>
+                    <span className="refund_cost">총 금액의 100% 환불</span>
+                  </li>
+                </ul>
+                <div className="map_box">
+                  <div className="map_text">
+                    <p className="map_title">발리와</p>
+                    <p className="map_adress">
+                      서울 강남구 압구정로10길 30-8 2층 발리와
+                    </p>
+                  </div>
+                  <div className="map_view"></div>
+                </div>
+                <div className="review_box">
+                  <div className="review_text"></div>
+                  <div className="review_list"></div>
+                  <div className="paging"></div>
+                </div>
               </div>
             </div>
           </section>
