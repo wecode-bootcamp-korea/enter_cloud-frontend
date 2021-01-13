@@ -24,5 +24,25 @@ html {
 
   body {
     font-family: "NanumBarunGothic", sans-serif;
+
+    .btn_com{
+      background: url(https://www.spacecloud.kr/_nuxt/img/08341ee.png) no-repeat;
+    }
+
+    .btn_search{
+      width: 30px;
+      height: 30px;
+      background-size: 684px 663px;
+      background-position: -637px -156px;
+      text-indent: -9999px;
+    }
+
+    .btn_menu{
+      width: 28px;
+      height: 22px;
+      background-size: 684px 663px;
+      background-position: -637px -540px;
+      text-indent: -9999px;
+    }
   }
 }
