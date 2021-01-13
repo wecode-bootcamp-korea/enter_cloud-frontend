@@ -1,6 +1,5 @@
-.Main{
-  .Main_category{
-      .Main_category_wrap1{
+  .main_category{
+      .main_category_wrap1{
         display: flex;
         flex-direction: column;
         align-items :center;
@@ -9,12 +8,13 @@
         padding:20px;
         
         span{
-          margin-top: 30px;
           display: flex;
+          margin-top: 30px;
           font-size : 25px;
           font-weight: 550;
           letter-spacing: -.5px;
         }
+
           ul{
             display: flex;
             margin-top:20px;
@@ -24,7 +24,7 @@
             background-color: white;
           }
         }
-      .Main_category_wrap2{
+      .main_category_wrap2{
         display: flex;
         flex-direction: column;
         align-items :center;
@@ -39,6 +39,7 @@
           font-weight: 550;
           letter-spacing: -.5px;
         }
+
           ul{
             display: flex;
             margin:20px 0 40px 0;
@@ -49,25 +50,28 @@
           }
     }
   }
-  .Main_review{
-    .Main_review_wrap{
+  .main_review{
+    .main_review_wrap{
       display: flex;
       justify-content:center;
       flex-direction: column;
       align-items: center;
-      padding: 30px 20px 60px 20px;
+      padding: 30px 20px 90px 20px;
+
     h2{
       margin-top: 25px;
       font-size : 25px;
       font-weight: 550;
       letter-spacing: -.5px;
     }
+
     h3{
       margin-top: 7px;
       font-weight: lighter;
       font-size: 13px;
     }
-    .Main_border{
+
+    .main_border{
       display: flex;
       margin:20px 0 40px 0;
       width:900px;
@@ -75,14 +79,12 @@
       border : 1px solid #ebebeb;
       background-color: white;
     }
+
     button{
       border: 2px solid #f6f6f6;
       width:900px;
       height: 50px;
       font-size:15px;
+      }
     }
-    
   }
-  }
-  
-}
