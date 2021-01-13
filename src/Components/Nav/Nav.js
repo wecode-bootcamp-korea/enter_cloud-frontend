@@ -1,19 +1,19 @@
 import React from "react";
-import { SlideMenu } from "../SlideMenu/SlideMenu";
+import SlideMenu from "../SlideMenu/SlideMenu";
 import "./Nav.scss";
 
 export class Nav extends React.Component {
   render() {
     return (
-      <nav>
+      <nav className="Nav">
         <section>
           <h1>EnterCloud</h1>
-          <div class="search_wr">
+          <div className="search_wr">
             <input
               type="text"
               placeholder="지역 또는 공간유형을 검색해보세요!"
             />
-            <button class="btn_search btn_com">검색</button>
+            <button className="btn_search btn_com">검색</button>
           </div>
           <ul>
             <li>
