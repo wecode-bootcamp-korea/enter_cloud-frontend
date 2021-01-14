@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "../../Components/Nav/Nav";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import "./Login.scss";
 
@@ -37,7 +38,7 @@ export class Login extends React.Component {
 
     if (checkEmail && checkPw) {
       this.handleLoginClick();
-    }else{
+    } else {
       this.setState({
         showBox: !showBox,
       });
@@ -50,7 +51,7 @@ export class Login extends React.Component {
   };
 
   handleLoginClick = () => {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     fetch("API", {
       method: "POST",
       body: JSON.stringify({
@@ -76,47 +77,50 @@ export class Login extends React.Component {
       pwValidation,
     } = this.state;
     return (
-      <main className="Login common_wrap">
-        <div className={`alert_box ${showBox ? "show" : ""}`}>
-          아이디 또는 비밀번호를 확인해주세요.
-        </div>
-        <h2>로그인</h2>
-        <section className="login_box common_box">
-          <SocialLogin />
-          <p className="or">
-            <span>또는</span>
-          </p>
-          <form>
-            <input
-              id="email"
-              type="text"
-              placeholder="이메일"
-              value={email}
-              onChange={this.handleLoginInfo}
-            />
-            <p className="validation_message">{emailValidation}</p>
-            <input
-              id="password"
-              type="password"
-              placeholder="비밀번호"
-              value={password}
-              onChange={this.handleLoginInfo}
-            />
-            <p className="validation_message">{pwValidation}</p>
-          </form>
-          <button
-            className="login_button btn_submit"
-            onClick={this.checkValidation}
-            onKeyUp={this.checkValidation}
-          >
-            이메일로 로그인
-          </button>
-          <p className="text_signup">
-            아직 엔터클라우드 회원이 아니신가요?
-            <a href="/SignUp">회원가입</a>
-          </p>
-        </section>
-      </main>
+      <>
+        <Nav />
+        <main className="Login common_wrap">
+          <div className={`alert_box ${showBox ? "show" : ""}`}>
+            아이디 또는 비밀번호를 확인해주세요.
+          </div>
+          <h2>로그인</h2>
+          <section className="login_box common_box">
+            <SocialLogin />
+            <p className="or">
+              <span>또는</span>
+            </p>
+            <form>
+              <input
+                id="email"
+                type="text"
+                placeholder="이메일"
+                value={email}
+                onChange={this.handleLoginInfo}
+              />
+              <p className="validation_message">{emailValidation}</p>
+              <input
+                id="password"
+                type="password"
+                placeholder="비밀번호"
+                value={password}
+                onChange={this.handleLoginInfo}
+              />
+              <p className="validation_message">{pwValidation}</p>
+            </form>
+            <button
+              className="login_button btn_submit"
+              onClick={this.checkValidation}
+              onKeyUp={this.checkValidation}
+            >
+              이메일로 로그인
+            </button>
+            <p className="text_signup">
+              아직 엔터클라우드 회원이 아니신가요?
+              <a href="/SignUp">회원가입</a>
+            </p>
+          </section>
+        </main>
+      </>
     );
   }
 }

@@ -111,21 +111,6 @@ export class SignUp extends React.Component {
     }
   }
 
-  // handleShowBox = () => {
-  //   // const {showBox, checkedService, checkedPrivacy} = this.state;
-  //   this.setState({
-  //     showBox : !this.state.showBox,
-  //   })
-  //   // if(!checkedService &&){
-
-  //   // }
-  //   // setTimeout(() => {
-  //   //   this.setState({
-  //   //     showBox : showBox,
-  //   //   })
-  //   // }, 2000)
-  // }
-
   handleSignUpClick = () => {
     this.setState({
       isValid: true,
