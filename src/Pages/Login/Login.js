@@ -1,4 +1,5 @@
 import React from "react";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import "./Login.scss";
 
 export class Login extends React.Component {
@@ -7,6 +8,9 @@ export class Login extends React.Component {
     this.state = {
       email: "",
       password: "",
+      emailValidation: "",
+      pwValidation: "",
+      showBox: false,
     };
   }
 
@@ -22,39 +26,63 @@ export class Login extends React.Component {
   checkValidation = e => {
     e.preventDefault();
 
-    const { email, password } = this.state;
-    const checkEmail = email.includes("@");
-    const checkPw = password.length >= 4;
+    const { email, password, showBox } = this.state;
+    const checkEmail = email;
+    const checkPw = password;
+
+    this.setState({
+      emailValidation: !checkEmail ? "이메일을 입력해주세요." : "",
+      pwValidation: !checkPw ? "비밀번호를 입력해주세요." : "",
+    });
 
     if (checkEmail && checkPw) {
-      alert("로그인 성공!");
-      this.props.history.push("/Main");
-    }
-    if (!checkEmail) {
-      alert("이메일은 @를 포함해야 합니다");
-    }
-    if (!checkPw) {
-      alert("비밀번호는 4자리 이상이어야 합니다");
+      this.handleLoginClick();
+    }else{
+      this.setState({
+        showBox: !showBox,
+      });
+      setTimeout(() => {
+        this.setState({
+          showBox: showBox,
+        });
+      }, 2000);
     }
   };
 
+  handleLoginClick = () => {
+    const {email, password} = this.state;
+    fetch("API", {
+      method: "POST",
+      body: JSON.stringify({
+        username: email,
+        password: password,
+      }),
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.message === "SUCCESS") {
+          localStorage.setItem("token", response.access_token);
+          this.props.history.push("/Main");
+        }
+      });
+  };
+
   render() {
-    const { email, password } = this.state;
+    const {
+      email,
+      password,
+      showBox,
+      emailValidation,
+      pwValidation,
+    } = this.state;
     return (
       <main className="Login common_wrap">
+        <div className={`alert_box ${showBox ? "show" : ""}`}>
+          아이디 또는 비밀번호를 확인해주세요.
+        </div>
         <h2>로그인</h2>
         <section className="login_box common_box">
-          <ul className="login_social common_social">
-            <li clasName="naver">
-              <button>네이버로 로그인</button>
-            </li>
-            <li clasName="kakao">
-              <button>카카오로 로그인</button>
-            </li>
-            <li clasName="apple">
-              <button>Apple로 로그인</button>
-            </li>
-          </ul>
+          <SocialLogin />
           <p className="or">
             <span>또는</span>
           </p>
@@ -66,6 +94,7 @@ export class Login extends React.Component {
               value={email}
               onChange={this.handleLoginInfo}
             />
+            <p className="validation_message">{emailValidation}</p>
             <input
               id="password"
               type="password"
@@ -73,11 +102,12 @@ export class Login extends React.Component {
               value={password}
               onChange={this.handleLoginInfo}
             />
+            <p className="validation_message">{pwValidation}</p>
           </form>
           <button
             className="login_button btn_submit"
             onClick={this.checkValidation}
-            onKeyup={this.checkValidation}
+            onKeyUp={this.checkValidation}
           >
             이메일로 로그인
           </button>
