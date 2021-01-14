@@ -41,54 +41,52 @@ export class Login extends React.Component {
   render() {
     const { email, password } = this.state;
     return (
-      <>
-        <main className="Login">
-          <h2>로그인</h2>
-          <section className="login_box">
-            <ul className="login_social">
-              <li clasName="naver">
-                <button>네이버로 로그인</button>
-              </li>
-              <li clasName="kakao">
-                <button>카카오로 로그인</button>
-              </li>
-              <li clasName="apple">
-                <button>Apple로 로그인</button>
-              </li>
-            </ul>
-            <p className="or">
-              <span>또는</span>
-            </p>
-            <form>
-              <input
-                id="email"
-                type="text"
-                placeholder="이메일"
-                value={email}
-                onChange={this.handleLoginInfo}
-              />
-              <input
-                id="password"
-                type="password"
-                placeholder="비밀번호"
-                value={password}
-                onChange={this.handleLoginInfo}
-              />
-            </form>
-            <button
-              className="login_button"
-              onClick={this.checkValidation}
-              onKeyup={this.checkValidation}
-            >
-              이메일로 로그인
-            </button>
-            <p className="text_signup">
-              아직 엔터클라우드 회원이 아니신가요?
-              <a href="/SignUp">회원가입</a>
-            </p>
-          </section>
-        </main>
-      </>
+      <main className="Login common_wrap">
+        <h2>로그인</h2>
+        <section className="login_box common_box">
+          <ul className="login_social common_social">
+            <li clasName="naver">
+              <button>네이버로 로그인</button>
+            </li>
+            <li clasName="kakao">
+              <button>카카오로 로그인</button>
+            </li>
+            <li clasName="apple">
+              <button>Apple로 로그인</button>
+            </li>
+          </ul>
+          <p className="or">
+            <span>또는</span>
+          </p>
+          <form>
+            <input
+              id="email"
+              type="text"
+              placeholder="이메일"
+              value={email}
+              onChange={this.handleLoginInfo}
+            />
+            <input
+              id="password"
+              type="password"
+              placeholder="비밀번호"
+              value={password}
+              onChange={this.handleLoginInfo}
+            />
+          </form>
+          <button
+            className="login_button btn_submit"
+            onClick={this.checkValidation}
+            onKeyup={this.checkValidation}
+          >
+            이메일로 로그인
+          </button>
+          <p className="text_signup">
+            아직 엔터클라우드 회원이 아니신가요?
+            <a href="/SignUp">회원가입</a>
+          </p>
+        </section>
+      </main>
     );
   }
 }

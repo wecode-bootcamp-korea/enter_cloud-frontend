@@ -25,5 +25,95 @@ html {
 
   body {
     font-family: "NanumBarunGothic", sans-serif;
+
+    //Login & SignUp common box
+    .common_wrap {
+      text-align: center;
+    
+      h2 {
+        padding: 120px 0 50px 0;
+        text-align: center;
+        font-size: 3.4rem;
+      }
+    
+      .common_box {
+        width: 648px;
+        padding: 30px;
+        margin: 0 auto;
+        background-color: #fff;
+        font-size: 1.6rem;
+    
+        .common_social {
+          width: 100%;
+          overflow: hidden;
+    
+          li {
+            position: relative;
+            height: 45px;
+            margin-bottom: 16px;
+            line-height: 45px;
+            color: #000;
+            border: solid 1px #000;
+            border-radius: 5px;
+    
+            i {
+              width: 24px;
+              height: 24px;
+              overflow: hidden;
+            }
+          }
+        }
+    
+        .or {
+          position: relative;
+          height: 20px;
+          margin: 16px 0 0;
+          text-align: center;
+    
+          span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            padding: 0 15px;
+            background-color: #fff;
+            font-size: 1.4rem;
+          }
+    
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $bg-gray;
+          }
+        }
+        
+        form {
+          font-size: 1.2rem;
+    
+          input {
+            width: 100%;
+            height: 48px;
+            padding: 0 10px;
+            margin: 16px 0 0;
+            line-height: 48px;
+            border: solid 1px #ccc;
+          }
+        }
+    
+        .btn_submit {
+          width: 100%;
+          height: 48px;
+          margin: 24px 0 0;
+          line-height: 48px;
+          background-color: $high-yellow;
+        }
+      }
+    }
   }
 }
