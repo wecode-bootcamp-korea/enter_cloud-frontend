@@ -2,7 +2,30 @@ import React from 'react';
 import './Reservation.scss';
 
 class Reservation extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      ReservationData: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('/data/Deatils.json')
+      .then(data => data.json())
+      .then(data => this.setState({ ReservationData: data[0].rightData }));
+  }
   render() {
+    const {
+      roomcase,
+      casecost,
+      img,
+      introduction,
+      spacetype,
+      mintime,
+      capacity,
+      icon,
+      maxCapacity,
+    } = this.state.ReservationData;
     return (
       <>
         <section className="right">
@@ -24,8 +47,8 @@ class Reservation extends React.Component {
             <ul className="reservation_list">
               <li>
                 <div className="flex_box">
-                  <img alt="select" src="/images/empty.svg" />
                   <div className="list_cost">
+                    <input />
                     <p>A형룸 202호(최대6인)낮타임</p>
                   </div>
                   <div className="list_subject">
@@ -46,18 +69,6 @@ class Reservation extends React.Component {
                   <span className="room_data">촬영스튜디오</span>
                 </li>
                 {/* 컴포넌트화시키기 */}
-                <li>
-                  <span className="room_style">공간유형</span>
-                  <span className="room_data">촬영스튜디오</span>
-                </li>
-                <li>
-                  <span className="room_style">공간유형</span>
-                  <span className="room_data">촬영스튜디오</span>
-                </li>
-                <li>
-                  <span className="room_style">공간유형</span>
-                  <span className="room_data">촬영스튜디오</span>
-                </li>
               </ul>
               <div className="reservation_total">
                 <div className="total_text">
