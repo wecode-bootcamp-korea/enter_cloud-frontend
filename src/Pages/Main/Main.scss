@@ -1,41 +1,34 @@
   .main_category{
+    background-color: #f6f6f6;
       .main_category_wrap1{
         display: flex;
         flex-direction: column;
         align-items :center;
         justify-content: center;
-        background-color: #f6f6f6;
         padding:20px;
         
         span{
           display: flex;
-          margin-top: 30px;
-          font-size : 25px;
+          margin: 50px 0px 50px 0px;
+          font-size : 3.5rem;
           font-weight: 550;
           letter-spacing: -.5px;
         }
-
-          ul{
-            display: flex;
-            margin-top:20px;
-            width:900px;
-            height: 150px;
-            border : 1px solid #ebebeb;
-            background-color: white;
-          }
         }
+        
       .main_category_wrap2{
         display: flex;
         flex-direction: column;
         align-items :center;
         justify-content: center;
-        background-color: #f6f6f6;
         padding:20px;
+        margin-top: 45px;
+        
         
         span{
-          margin-top: 60px;
           display: flex;
-          font-size : 25px;
+          margin-top: 60px;
+          font-size : 3.5rem;
           font-weight: 550;
           letter-spacing: -.5px;
         }
@@ -43,8 +36,8 @@
           ul{
             display: flex;
             margin:20px 0 40px 0;
-            width:900px;
-            height: 250px;
+            width:45%;
+            height: 600px;
             border : 1px solid #ebebeb;
             background-color: white;
           }
@@ -60,7 +53,7 @@
 
     h2{
       margin-top: 25px;
-      font-size : 25px;
+      font-size : 3.5rem;
       font-weight: 550;
       letter-spacing: -.5px;
     }
@@ -68,23 +61,20 @@
     h3{
       margin-top: 7px;
       font-weight: lighter;
-      font-size: 13px;
+      font-size: 1.5rem;
     }
 
     .main_border{
       display: flex;
-      margin:20px 0 40px 0;
-      width:900px;
-      height: 250px;
-      border : 1px solid #ebebeb;
-      background-color: white;
+      justify-content: center;
+      width: 45%;
     }
 
     button{
       border: 2px solid #f6f6f6;
-      width:900px;
-      height: 50px;
-      font-size:15px;
+      width:45%;
+      height: 55px;
+      font-size:2rem;
       }
     }
   }

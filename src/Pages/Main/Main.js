@@ -3,6 +3,8 @@ import "./Main.scss";
 import "react-router-dom";
 import Slide from "./Components/Slide/Slide";
 import Footer from "./Components/Footer/Footer";
+import Category from "./Components/Category/Category";
+import Userreview from "./Components/Userreview/Userreview";
 
 export class Main extends React.Component {
   render() {
@@ -12,10 +14,7 @@ export class Main extends React.Component {
         <section className="main_category">
           <div className="main_category_wrap1">
             <span>어떤 공간을 찾고 있나요?</span>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-            </ul>
+            <Category />
           </div>
           <div className="main_category_wrap2">
             <span>오늘의 추천공간</span>
@@ -29,7 +28,9 @@ export class Main extends React.Component {
           <div className="main_review_wrap">
             <h2>이용자 리뷰</h2>
             <h3>생생한 후기를 만나보세요</h3>
-            <div className="main_border">보더</div>
+            <div className="main_border">
+              <Userreview />
+            </div>
             <button>더보기</button>
           </div>
         </section>
