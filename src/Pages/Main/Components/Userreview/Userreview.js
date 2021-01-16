@@ -15,7 +15,6 @@ class Userreview extends React.Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log("res>>>>>", res);
         this.setState({
           initData: res.data,
         });
