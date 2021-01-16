@@ -1,10 +1,11 @@
 import React from "react";
 import "./Main.scss";
 import "react-router-dom";
-import Slide from "./Components/Slide/Slide";
-import Footer from "./Components/Footer/Footer";
-import Category from "./Components/Category/Category";
-import Userreview from "./Components/Userreview/Userreview";
+import Slide from "./components/Slide/Slide";
+import Footer from "./components/Footer/Footer";
+import Category from "./components/Category/Category";
+import Userreview from "./components/Userreview/Userreview";
+import Recommend from "./components/Recommned/Recommend";
 
 export class Main extends React.Component {
   render() {
@@ -18,10 +19,7 @@ export class Main extends React.Component {
           </div>
           <div className="main_category_wrap2">
             <span>오늘의 추천공간</span>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-            </ul>
+            <Recommend />
           </div>
         </section>
         <section className="main_review">

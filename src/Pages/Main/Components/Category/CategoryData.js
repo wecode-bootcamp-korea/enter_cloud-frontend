@@ -6,6 +6,3 @@ export const CategoryData = [
   { id: 4, name: "한옥", number: "5" },
   { id: 5, name: "연습실", number: "6" },
 ];
-// export const CategoryData2 = [
-
-// ];
