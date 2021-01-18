@@ -1,11 +1,11 @@
 import React from "react";
-import "./Main.scss";
 import "react-router-dom";
-import Slide from "./components/Slide/Slide";
-import Footer from "./components/Footer/Footer";
-import Category from "./components/Category/Category";
-import Userreview from "./components/Userreview/Userreview";
-import Recommend from "./components/Recommned/Recommend";
+import "./Main.scss";
+import Slide from "./Components/Slide/Slide";
+import Footer from "./Components/Footer/Footer";
+import Category from "./Components/Category/Category";
+import Userreview from "./Components/Userreview/Userreview";
+import Recommend from "./Components/Recommned/Recommend";
 
 export class Main extends React.Component {
   render() {

@@ -1,9 +1,67 @@
 .recommend{
-section{
-  border : 1px solid black;
-  width : 200px;
-  height: 200px;
-  
-}
 
+  section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:1020px;
+    height: 340px;
+
+    .recommend_card{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #ebebeb;
+    margin: 20px;
+    width:33.33%;
+    height: 290px;
+    font-size: 2rem;
+
+      .recommend_img{
+        height: 62%;
+      }
+      
+      .recommend_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        height: 38%;
+        padding: 10px;
+
+        .recommend_content_top{
+          font-size : 2rem;
+        }
+
+        .recommend_content_mid{
+          font-size : 1.3rem;
+          padding: 10px 0;
+        }
+
+        .recommend_content_bottom{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size : 1.8rem;
+
+          .price_wrap{
+            display:flex;
+            align-items: center;
+
+          h2{
+            font-size: 2rem;
+            font-weight: normal;
+            margin-right: 5px;
+          }
+
+          h3{
+            left: 40px;
+            font-size: 1.2rem;
+            font-weight: normal;
+          }
+        }
+        }
+      }
+    }
+  }
 }
