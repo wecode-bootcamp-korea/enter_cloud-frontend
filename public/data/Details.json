@@ -27,8 +27,13 @@
       "postTime": "2020.11.26 10:55:37"
     },
     "rightData": {
-      "roomcase": "A room (한번 the)",
-      "casecost": "3,000",
+      "roomType": [
+        {
+          "id": "",
+          "roomcase": ["A룸", "B룸", "C룸"],
+          "casecost": ["3,000", "5000", "10,000"]
+        }
+      ],
       "img": "https://i.pinimg.com/474x/b4/62/81/b4628199b673dab34b7fbaefbd2700ab.jpg",
       "introduction": "홍대입구역 3번출구 도보 1분 거리",
       "spacetype": ["a", "b", "c"],

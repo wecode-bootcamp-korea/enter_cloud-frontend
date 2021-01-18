@@ -31,7 +31,7 @@ class Contentlist extends React.Component {
       postTime,
     } = this.state.contentData;
     const { listItem, refund } = this.state;
-    console.log({ listItem, refund });
+    console.log({ facility });
     return (
       <>
         <section className="left">
@@ -62,17 +62,27 @@ class Contentlist extends React.Component {
             <div className="second_box">
               <h4 className="second_subject">시설안내</h4>
               <ul className="second_list">
-                <li>
-                  <span className="content_number">1</span>
-                  <span className="content_text">{facility}</span>
-                </li>
+                {facility &&
+                  facility.map((ele, idx) => {
+                    return (
+                      <li key={idx}>
+                        <span className="content_number">{idx + 1}</span>
+                        <span className="content_text">{ele}</span>
+                      </li>
+                    );
+                  })}
               </ul>
               <h4 className="second_subject">예약시 유의사항</h4>
               <ul className="second_list">
-                <li>
-                  <span className="content_number">1</span>
-                  <span className="content_text">{notice}</span>
-                </li>
+                {notice &&
+                  notice.map((ele, idx) => {
+                    return (
+                      <li>
+                        <span className="content_number">{idx + 1}</span>
+                        <span className="content_text">{ele}</span>
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
             <div className="third_box">

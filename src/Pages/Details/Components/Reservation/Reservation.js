@@ -1,4 +1,5 @@
 import React from 'react';
+import { acceptData } from './ReservationData';
 import './Reservation.scss';
 
 class Reservation extends React.Component {
@@ -6,6 +7,7 @@ class Reservation extends React.Component {
     super();
     this.state = {
       ReservationData: [],
+      peopleCount: 1,
     };
   }
 
@@ -16,8 +18,7 @@ class Reservation extends React.Component {
   }
   render() {
     const {
-      roomcase,
-      casecost,
+      roomType,
       img,
       introduction,
       spacetype,
@@ -26,6 +27,7 @@ class Reservation extends React.Component {
       icon,
       maxCapacity,
     } = this.state.ReservationData;
+    console.log({ roomType, introduction });
     return (
       <>
         <section className="right">
@@ -45,40 +47,97 @@ class Reservation extends React.Component {
               </p>
             </div>
             <ul className="reservation_list">
+              {roomType &&
+                roomType.map((ele, idx) => {
+                  return (
+                    <li key={idx}>
+                      <div className="flex_box">
+                        <div className="list_cost">
+                          <input type="radio" />
+                          <p>{ele}</p>
+                        </div>
+                        <div className="list_subject">
+                          <p>{ele}</p>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
               <li>
                 <div className="flex_box">
                   <div className="list_cost">
-                    <input />
-                    <p>A형룸 202호(최대6인)낮타임</p>
+                    <input type="radio" />
+                    <p>hi</p>
                   </div>
                   <div className="list_subject">
-                    <p></p>
+                    <p>₩30,3000원</p>
                   </div>
                 </div>
               </li>
             </ul>
             <div className="reservation_detail">
-              <img
-                alt="hostphoto"
-                src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/117695455_303895957724855_8135055200715456199_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=S2wPguRXnCwAX-EWHMR&tp=1&oh=f146edea232a56224dba39d5e493a072&oe=60161C13"
-              />
-              <p>유리로 된 천장의 오픈감을 느낄수 있는 룸입니다.</p>
+              <img alt="hostphoto" src={img} />
+              <p>{introduction}</p>
               <ul>
                 <li>
                   <span className="room_style">공간유형</span>
                   <span className="room_data">촬영스튜디오</span>
                 </li>
+                <li>
+                  <span className="room_style">예약시간</span>
+                  <span className="room_data">최소 2시간 부터</span>
+                </li>
+                <li>
+                  <span className="room_style">수용인원</span>
+                  <span className="room_data">최소 4명 ~ 최대 6명</span>
+                </li>
                 {/* 컴포넌트화시키기 */}
               </ul>
+              <div className="facility_wrap">
+                <ul className="facility_list">
+                  {acceptData.map(data => (
+                    <li key={data.id}>
+                      <i className={data.type}></i>
+                      <span>{data.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className="reservation_total">
                 <div className="total_text">
                   <h3>총 예약인원</h3>
                   <span>(최대 10명 , 4명 초과시 5,500원/인)</span>
                 </div>
                 <div className="total_sum">
-                  <a href="/">11</a>
-                  <span>1</span>
-                  <a href="/">11</a>
+                  <button
+                    className="click_minus"
+                    onClick={() => {
+                      this.setState({
+                        peopleCount: this.state.peopleCount - 1,
+                      });
+                    }}
+                  >
+                    <i className="minus"></i>
+                  </button>
+                  <span>
+                    <input
+                      type="number"
+                      value={this.state.peopleCount}
+                      onChange={e => {
+                        this.setState({ peopleCount: e.target.value });
+                      }}
+                    />
+                  </span>
+                  <button
+                    className="click_plus"
+                    onClick={() => {
+                      this.setState({
+                        peopleCount: this.state.peopleCount + 1,
+                      });
+                    }}
+                  >
+                    <i className="plus"></i>
+                  </button>
                 </div>
               </div>
             </div>
