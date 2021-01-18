@@ -1,21 +1,53 @@
 .user_review{
-  
+  display:flex;
+  justify-content: center;
+  width:100%;
+
   article{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width:1020px;
-    height: 340px;
+    height: 500px;
 
+    h2{
+      margin-top: 25px;
+      font-size : 3.5rem;
+      font-weight: 550;
+      letter-spacing: -.5px;
+    }
+    
+    h3{
+      margin-top: 7px;
+      font-weight: lighter;
+      font-size: 1.5rem;
+    }
+
+    .review_map{
+      display: flex;
+      
     .review_card{
     display:flex;
     flex-direction: column;
     border: 3px solid #f6f6f6;
-    padding : 20px;
     margin: 20px;
     width:33.333%;
     height: 300px;
     font-size: 2rem;
+    position: relative;
+    background-color: grey;
+    
+
+      .review_img{
+        opacity: 0.5;
+      }
+
+      .review_content{
+        position:absolute;
+        padding: 15px;
+        opacity: 1;
+        color: white;
 
       .title{
         margin-top: 10px;
@@ -31,5 +63,30 @@
         font-size: 1.2rem;
       }
     }
+    }
+    }
+
+    button{
+        border: 2px solid #f6f6f6;
+        width:60%;
+        height: 55px;
+        font-size:2rem;
+        }
   }
 }
+
+
+// .main_review_wrap{
+//   display: flex;
+//   justify-content:center;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 30px 20px 90px 20px;
+
+// button{
+//   border: 2px solid #f6f6f6;
+//   width:45%;
+//   height: 55px;
+//   font-size:2rem;
+//   }
+// }

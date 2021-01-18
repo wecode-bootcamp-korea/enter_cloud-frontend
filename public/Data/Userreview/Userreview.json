@@ -4,46 +4,22 @@
     "id":1,
     "title":"카멜레온 [매일소독중]",
     "price":"15,900 원/시간",
-    "review":"항상 잘 쓰고 있어요"
+    "review":"항상 잘 쓰고 있어요",
+    "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160499442_847fb536369e3d0b673f431e5712bb0a.jpg?type=m&w=900&h=900&autorotate=true&quality=90"
   },
   { 
     "id":2,
     "title":"일산 연습실",
     "price":"4,000 원/시간",
-    "review":"방이 더럽네요"
+    "review":"방이 더럽네요",
+    "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160499442_847fb536369e3d0b673f431e5712bb0a.jpg?type=m&w=900&h=900&autorotate=true&quality=90"
   },
   { 
     "id":3,
     "title":"스텝아트컴퍼니",
     "price":"10,000 원/시간",
-    "review":"조명이 이쁘네요"
-  }
-],
-
-"tag_data":[
-  {
-    "id":1,
-    "tag":"회의실"
-  },
-  {
-    "id":2,
-    "tag":"세미나실"
-  },
-  {
-    "id":3,
-    "tag":"스터디룸"
-  },
-  {
-    "id":4,
-    "tag":"카페"
-  },
-  {
-    "id":5,
-    "tag":"한옥"
-  },
-  {
-    "id":6,
-    "tag":"연습실"
+    "review":"조명이 이쁘네요",
+    "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160499442_847fb536369e3d0b673f431e5712bb0a.jpg?type=m&w=900&h=900&autorotate=true&quality=90"
   }
 ]
-}
+  }

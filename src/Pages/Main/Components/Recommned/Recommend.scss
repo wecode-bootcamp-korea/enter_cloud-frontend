@@ -34,9 +34,28 @@
         }
 
         .recommend_content_mid{
-          font-size : 1.3rem;
-          padding: 10px 0;
+          display:flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          .location{
+            font-size:0.8rem;
+            font-weight: bolder;
+
+            &:after{
+              content: "";
+              border-right: 1px solid black;
+              padding: 0 2px;
+            }
+          }
+          span{
+          flex-direction: row;
+          font-size : 0.5rem;
+          padding: 2px;
+          margin :1px;
+          font-weight: lighter;
         }
+      }
 
         .recommend_content_bottom{
           display: flex;

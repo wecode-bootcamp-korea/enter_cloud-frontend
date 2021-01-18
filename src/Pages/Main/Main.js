@@ -6,12 +6,14 @@ import Footer from "./Components/Footer/Footer";
 import Category from "./Components/Category/Category";
 import Userreview from "./Components/Userreview/Userreview";
 import Recommend from "./Components/Recommned/Recommend";
+import Nav from "../../Components/Nav/Nav"
 
 export class Main extends React.Component {
   render() {
     return (
       <div className="main">
-        <Slide />
+      <Nav />
+        <div className="slide"><Slide /></div>
         <section className="main_category">
           <div className="main_category_wrap1">
             <span>어떤 공간을 찾고 있나요?</span>
@@ -23,14 +25,7 @@ export class Main extends React.Component {
           </div>
         </section>
         <section className="main_review">
-          <div className="main_review_wrap">
-            <h2>이용자 리뷰</h2>
-            <h3>생생한 후기를 만나보세요</h3>
-            <div className="main_border">
-              <Userreview />
-            </div>
-            <button>더보기</button>
-          </div>
+        <Userreview />
         </section>
         <Footer />
       </div>

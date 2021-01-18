@@ -33,7 +33,12 @@ class Recommend extends React.Component {
                   <div className="recommend_content_top">
                     {recommendCard.name}
                   </div>
-                  <div className="recommend_content_mid">tags</div>
+                  <div className="recommend_content_mid">
+                    <div className="location">{recommendCard.location}</div>
+                    {recommendCard.tags.map(tag => 
+                      <span>{tag}</span>  
+                    )}
+                  </div>
                   <div className="recommend_content_bottom">
                     <div className="price_wrap">
                       <h2>{recommendCard.price}</h2>
