@@ -5,43 +5,37 @@ class Headline extends React.Component {
   constructor() {
     super();
     this.state = {
-      HeadData: [],
+      headData: [],
     };
   }
 
   componentDidMount() {
     fetch('/data/Details.json')
       .then(data => data.json())
-      .then(data => this.setState({ HeadData: data[0].leftData }));
+      .then(data => this.setState({ headData: data.main[0] }));
   }
 
   render() {
-    const { title, subject, tags, img } = this.state.HeadData;
+    const { name, simple_information, main_image, tags } = this.state.headData;
     return (
-      <>
-        <section className="left">
-          <div className="left_space">
-            <h2>{title}</h2>
-            <p>{subject}</p>
-            <ul>
-              {tags &&
-                tags.map(tag => {
-                  return <li>#{tag}</li>;
-                })}
-            </ul>
-            <img alt="사진1" src={img} />
-            <div className="text_box">
-              <h3>{subject}</h3>
-            </div>
+      <section className="Headline">
+        <div className="headlineSpace">
+          <h2>{name}</h2>
+          <p>{simple_information}</p>
+          <ul>
+            {tags &&
+              tags.map(tag => {
+                return <li key={tag.id}>{tag}</li>;
+              })}
+          </ul>
+          <img alt="사진1" src={main_image} />
+          <div className="textBox">
+            <h3>{simple_information}</h3>
           </div>
-        </section>
-      </>
+        </div>
+      </section>
     );
   }
 }
-// key={tags.toString()
-export default Headline;
 
-// {this.state.HeadData.map(list => {
-//   return <Headlineson list={list} />;
-// })}
+export default Headline;

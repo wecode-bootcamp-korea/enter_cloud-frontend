@@ -1,6 +1,6 @@
 import React from 'react';
-import './Contentlist.scss';
 import { listItem, refund } from './contentFixData';
+import './Contentlist.scss';
 
 class Contentlist extends React.Component {
   constructor() {
@@ -15,55 +15,62 @@ class Contentlist extends React.Component {
   componentDidMount() {
     fetch('/data/Details.json')
       .then(data => data.json())
-      .then(data => this.setState({ contentData: data[0].leftData }));
+      .then(data => this.setState({ contentData: data.main[0] }));
     this.setState({ listItem: listItem, refund: refund });
   }
   render() {
     const {
-      introduction,
-      hostTime,
-      hostDay,
-      facility,
-      notice,
-      profileImg,
-      userName,
-      text,
-      postTime,
+      main_information,
+      open_time,
+      close_time,
+      // site_url,
+      // sub_images,
+      break_days,
+      facilities_informations,
+      reservation_notes,
     } = this.state.contentData;
     const { listItem, refund } = this.state;
-    console.log({ facility });
     return (
-      <>
+      <div className="Contentlist">
         <section className="left">
           <div className="left_list">
             <ul className="list_click">
               {listItem.map(listItemData => {
                 return (
-                  <li>
-                    <a href="/">{listItemData}</a>
+                  <li key={listItemData.id}>
+                    <a href={listItemData.href}>{listItemData.name}</a>
                   </li>
                 );
               })}
             </ul>
             <div className="first_box">
-              <h4 className="first_subject">공간소개</h4>
-              <p className="first_text">{introduction}</p>
+              <h4 id="list1" className="first_subject">
+                공간 소개
+              </h4>
+              <p className="first_text">{main_information}</p>
               <ul className="first_list">
                 <li className="host_hours">
                   <span className="host_sub_time">영업시간</span>
-                  <span className="host_time">{hostTime}</span>
+                  <span className="host_time">
+                    {open_time}~{close_time}시
+                  </span>
                 </li>
                 <li className="host_holiday">
                   <span className="host_sub_day">휴무일</span>
-                  <span className="host_day">{hostDay}</span>
+                  {break_days &&
+                    break_days.map(day => {
+                      return <span className="host_day">{day}</span>;
+                    })}
                 </li>
               </ul>
             </div>
             <div className="second_box">
-              <h4 className="second_subject">시설안내</h4>
+              <h4 id="list2" className="second_subject">
+                시설 안내
+              </h4>
               <ul className="second_list">
-                {facility &&
-                  facility.map((ele, idx) => {
+                {facilities_informations &&
+                  facilities_informations.map((ele, idx) => {
                     return (
                       <li key={idx}>
                         <span className="content_number">{idx + 1}</span>
@@ -72,12 +79,14 @@ class Contentlist extends React.Component {
                     );
                   })}
               </ul>
-              <h4 className="second_subject">예약시 유의사항</h4>
+              <h4 id="list3" className="second_subject">
+                예약시 유의사항
+              </h4>
               <ul className="second_list">
-                {notice &&
-                  notice.map((ele, idx) => {
+                {reservation_notes &&
+                  reservation_notes.map((ele, idx) => {
                     return (
-                      <li>
+                      <li key={idx}>
                         <span className="content_number">{idx + 1}</span>
                         <span className="content_text">{ele}</span>
                       </li>
@@ -86,7 +95,9 @@ class Contentlist extends React.Component {
               </ul>
             </div>
             <div className="third_box">
-              <h4 className="third_subject">환불 규정</h4>
+              <h4 id="list4" className="third_subject">
+                환불 규정안내
+              </h4>
               <p className="third_text">
                 <em>
                   이용당일(첫 날) 이후에 환불 관련 사항은 호스트에게 직접
@@ -99,7 +110,7 @@ class Contentlist extends React.Component {
               <ul className="third_list">
                 {refund.map(refundData => {
                   return (
-                    <li>
+                    <li key={refundData.id}>
                       <span className="refund_day">
                         이용 {refundData.day}일 전
                       </span>
@@ -129,7 +140,9 @@ class Contentlist extends React.Component {
               </div> */}
               <div className="review_container">
                 <div className="review_text">
-                  <h4 className="text_title">이용후기</h4>
+                  <h4 id="list5" className="text_title">
+                    이용후기
+                  </h4>
                   <span>28개</span>
                   <span className="dot"></span>
                   <h4 className="text_title">평균 평점</h4>
@@ -138,16 +151,12 @@ class Contentlist extends React.Component {
                 <div className="review_box">
                   <ul className="review_list">
                     <li>
-                      <img
-                        className="user_img"
-                        alt="suhyeon"
-                        src={profileImg}
-                      />
+                      <img className="user_img" alt="suhyeon" src="/" />
                       <div className="user_review">
                         <div className="user_text">
-                          <p className="user_id">{userName}</p>
-                          <p className="user_comment">{text}</p>
-                          <span>{postTime}</span>
+                          <p className="user_id">{}</p>
+                          <p className="user_comment">{}</p>
+                          <span>{}</span>
                         </div>
                         <ul className="like_box">
                           <li>
@@ -181,7 +190,7 @@ class Contentlist extends React.Component {
             </div>
           </div>
         </section>
-      </>
+      </div>
     );
   }
 }

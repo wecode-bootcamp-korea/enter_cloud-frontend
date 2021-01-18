@@ -1,9 +1,9 @@
 @import '../../../../Styles/Common.scss';
 
-.left {
+.Headline {
   width: 763px;
 
-  .left_space {
+  .headlineSpace {
     h2 {
       height: 94px;
       font-size: 42px;
@@ -49,7 +49,7 @@
       object-fit: cover;
     }
 
-    .text_box {
+    .textBox {
       width: 100%;
       height: 170px;
       margin: 0 0 50px 0;
