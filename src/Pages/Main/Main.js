@@ -3,7 +3,6 @@ import "react-router-dom";
 import Nav from "../../Components/Nav/Nav"
 import Slide from "./Components/Slide/Slide";
 import Category from "./Components/Category/Category";
-import Listpage from "./Components/Listpage/Listpage";
 import Recommend from "./Components/Recommned/Recommend";
 import Userreview from "./Components/Userreview/Userreview";
 import Footer from "./Components/Footer/Footer";
@@ -20,7 +19,6 @@ export class Main extends React.Component {
             <Category />
           </div>
           <section className="main_listpage">
-            <Listpage />
           </section>
           <div className="main_category_wrap2">
             <Recommend />
