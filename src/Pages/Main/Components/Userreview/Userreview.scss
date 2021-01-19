@@ -1,7 +1,6 @@
 .user_review{
   display:flex;
   justify-content: center;
-  width:100%;
 
   article{
     display:flex;
@@ -32,8 +31,8 @@
     flex-direction: column;
     border: 3px solid #f6f6f6;
     margin: 20px;
-    width:33.333%;
-    height: 300px;
+    width:280px;
+    height: 250px;
     font-size: 2rem;
     position: relative;
     background-color: grey;

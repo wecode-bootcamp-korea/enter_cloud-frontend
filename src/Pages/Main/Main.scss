@@ -3,39 +3,15 @@
   }
   .main_category{
     background-color: #f6f6f6;
+    
       .main_category_wrap1{
         display: flex;
         flex-direction: column;
         align-items :center;
         justify-content: center;
         padding:20px;
-        
-        span{
-          display: flex;
-          margin: 50px 0px 50px 0px;
-          font-size : 3.5rem;
-          font-weight: 550;
-          letter-spacing: -.5px;
         }
-        }
-        
-      .main_category_wrap2{
-        display: flex;
-        flex-direction: column;
-        align-items :center;
-        justify-content: center;
-        padding:20px;
-        margin-top: 25px;
-        
-        
-        span{
-          display: flex;
-          margin-top: 60px;
-          font-size : 3.5rem;
-          font-weight: 550;
-          letter-spacing: -.5px;
-        }
-    }
+
     .main_review{
       display: flex;
       width:45%;

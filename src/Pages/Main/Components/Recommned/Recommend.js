@@ -10,7 +10,7 @@ class Recommend extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/Data/RecommendData/RecommendData.json", { method: "GET" })
+    fetch("/Data/RecommendData/RecommendData.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -22,12 +22,13 @@ class Recommend extends React.Component {
   render() {
     return (
       <div className="recommend">
+            <span>오늘의 추천공간</span>
         <section>
           {this.state.recommendData.map((recommendCard) => {
             return (
               <div className="recommend_card" key={recommendCard.id}>
                 <div className="recommend_img">
-                  <img alt="아무거나" src={recommendCard.imgsrc} />
+                  <img alt="추천공간이미지" src={recommendCard.imgsrc} />
                 </div>
                 <div className="recommend_content">
                   <div className="recommend_content_top">

@@ -1,5 +1,18 @@
 .recommend{
-
+  display: flex;
+  flex-direction: column;
+  align-items :center;
+  justify-content: center;
+  padding:20px;
+  margin-top: 25px;
+        
+  span{
+    display: flex;
+    margin-top: 10px;
+    font-size : 3.5rem;
+    font-weight: 550;
+    letter-spacing: -.5px;
+  }
   section{
     display:flex;
     justify-content: center;
