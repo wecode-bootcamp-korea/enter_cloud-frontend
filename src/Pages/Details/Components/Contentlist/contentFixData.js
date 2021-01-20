@@ -1,9 +1,9 @@
 export const listItem = [
-  { id: '1', href: '/#list1', name: '공간소개' },
-  { id: '2', href: '/#list2', name: '시설안내' },
-  { id: '3', href: '/#list3', name: '유의사항' },
-  { id: '4', href: '/#list4', name: '환불정책' },
-  { id: '5', href: '/#list5', name: '이용후기' },
+  { id: '1', href: '#list1', name: '공간소개' },
+  { id: '2', href: '#list2', name: '시설안내' },
+  { id: '3', href: '#list3', name: '유의사항' },
+  { id: '4', href: '#list4', name: '환불정책' },
+  { id: '5', href: '#list5', name: '이용후기' },
 ];
 
 export const refund = [
@@ -22,3 +22,6 @@ export const refundText = {
   secondText:
     '결제 후 2시간 이내에는 100% 환불이 가능합니다.(단, 이용시간전까지만 가능)',
 };
+
+export const fixImg =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-VorlNYtHd0lxv9dRjs7a9PKdWuEEkXkbg&usqp=CAU';

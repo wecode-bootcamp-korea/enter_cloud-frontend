@@ -1,5 +1,5 @@
 import React from 'react';
-import { listItem, refund } from './contentFixData';
+import { listItem, refund, fixImg } from './contentFixData';
 import './Contentlist.scss';
 
 class Contentlist extends React.Component {
@@ -9,15 +9,26 @@ class Contentlist extends React.Component {
       listItem: [],
       refund: [],
       contentData: [],
+      reviewData: [],
     };
   }
 
   componentDidMount() {
-    fetch('/data/Details.json')
+    fetch('http://10.58.4.13:8000/spaces/1')
       .then(data => data.json())
       .then(data => this.setState({ contentData: data.main[0] }));
+
+    fetch('http://10.58.4.13:8000/reviews/1')
+      .then(data => data.json())
+      .then(data =>
+        this.setState({
+          reviewData: data.review_data,
+        })
+      );
+
     this.setState({ listItem: listItem, refund: refund });
   }
+
   render() {
     const {
       main_information,
@@ -29,6 +40,7 @@ class Contentlist extends React.Component {
       facilities_informations,
       reservation_notes,
     } = this.state.contentData;
+    const { reviewData } = this.state;
     const { listItem, refund } = this.state;
     return (
       <div className="Contentlist">
@@ -59,7 +71,7 @@ class Contentlist extends React.Component {
                   <span className="host_sub_day">휴무일</span>
                   {break_days &&
                     break_days.map(day => {
-                      return <span className="host_day">{day}</span>;
+                      return <span className="host_day">{day}요일 </span>;
                     })}
                 </li>
               </ul>
@@ -143,34 +155,43 @@ class Contentlist extends React.Component {
                   <h4 id="list5" className="text_title">
                     이용후기
                   </h4>
-                  <span>28개</span>
+                  <span>30개</span>
                   <span className="dot"></span>
-                  <h4 className="text_title">평균 평점</h4>
-                  <span>4.9</span>
+                  <h4 className="text_Average">평균 평점</h4>
+                  <span>4.8</span>
                 </div>
                 <div className="review_box">
                   <ul className="review_list">
-                    <li>
-                      <img className="user_img" alt="suhyeon" src="/" />
-                      <div className="user_review">
-                        <div className="user_text">
-                          <p className="user_id">{}</p>
-                          <p className="user_comment">{}</p>
-                          <span>{}</span>
-                        </div>
-                        <ul className="like_box">
+                    {reviewData &&
+                      reviewData.map(ele => {
+                        return (
                           <li>
-                            <img alt="like" src="./images/star.svg" />
+                            <img
+                              className="user_img"
+                              alt="suhyeon"
+                              src={fixImg}
+                            />
+                            <div className="user_review">
+                              <div className="user_text">
+                                <p className="user_id">{ele.user_nickname}</p>
+                                <p className="user_comment">{ele.content}</p>
+                                <span>{ele.created_at}</span>
+                              </div>
+                              <ul className="like_box">
+                                <li>
+                                  <img alt="like" src="./images/star.svg" />
+                                </li>
+                                <li>
+                                  <img alt="like" src="./images/star.svg" />
+                                </li>
+                                <li>
+                                  <img alt="like" src="./images/star.svg" />
+                                </li>
+                              </ul>
+                            </div>
                           </li>
-                          <li>
-                            <img alt="like" src="./images/star.svg" />
-                          </li>
-                          <li>
-                            <img alt="like" src="./images/star.svg" />
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                        );
+                      })}
                   </ul>
                   <div className="paging">
                     <a className="btn_previous" href="/">

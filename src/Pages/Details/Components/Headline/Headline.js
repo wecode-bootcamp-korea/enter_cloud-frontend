@@ -10,7 +10,7 @@ class Headline extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/Details.json')
+    fetch('http://10.58.4.13:8000/spaces/1')
       .then(data => data.json())
       .then(data => this.setState({ headData: data.main[0] }));
   }
