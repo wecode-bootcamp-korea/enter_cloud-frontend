@@ -1,0 +1,13 @@
+@import '../../Styles/Common.scss';
+
+.Details {
+  background-color: $bg-gray;
+
+  .detail_wraper {
+    width: 1158px;
+    margin: 78px auto 0;
+    padding: 50 0 100 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}

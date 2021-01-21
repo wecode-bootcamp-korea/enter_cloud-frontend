@@ -1,6 +1,6 @@
-import React from "react";
-import Slider from "react-slick";
-import "./Slide.scss";
+import React from 'react';
+import Slider from 'react-slick';
+import './Slide.scss';
 
 class Slide extends React.Component {
   render() {

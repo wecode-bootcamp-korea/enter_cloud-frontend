@@ -1,6 +1,6 @@
-import React from "react";
-import "../Footer/Footer.scss";
-import { FooterData1, FooterData2 } from "./Footerdata";
+import React from 'react';
+import '../Footer/Footer.scss';
+import { FooterData1, FooterData2 } from './Footerdata';
 
 class Footer extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class Footer extends React.Component {
           <button>EnterCloud</button>
           <div>
             <ul>
-              {FooterData1.map((footertop) => (
+              {FooterData1.map(footertop => (
                 <li key={footertop.key}>{footertop.name}</li>
               ))}
             </ul>
@@ -18,7 +18,7 @@ class Footer extends React.Component {
         </section>
         <section className="footer_mid">
           <ul className="footer_mid_ul">
-            {FooterData2.map((footermid) => (
+            {FooterData2.map(footermid => (
               <li key={footermid.key}>{footermid.name}</li>
             ))}
           </ul>
