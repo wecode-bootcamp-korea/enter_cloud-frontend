@@ -9,7 +9,7 @@ class Headline extends React.Component {
       tags,
       main_image,
     } = this.props.detailsData;
-    console.log(this.props.detailsData);
+
     return (
       <section className="Headline">
         <div className="headlineSpace">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { listItem, refund, fixImg, reviewLike } from './contentFixData';
+import { listItem, refund, fixImg } from './contentFixData';
 import './Contentlist.scss';
 
 class Contentlist extends React.Component {
@@ -16,18 +16,18 @@ class Contentlist extends React.Component {
   }
 
   render() {
+    const { listItem, refund } = this.state;
+    const { detailsReviewData } = this.props;
+
     const {
       main_information,
       open_time,
       close_time,
-      // site_url,
-      // sub_images,
       break_days,
       facilities_informations,
       reservation_notes,
     } = this.props.detailsData;
-    const { detailsReviewData } = this.props;
-    const { listItem, refund } = this.state;
+
     return (
       <div className="Contentlist">
         <section className="left">
@@ -127,15 +127,6 @@ class Contentlist extends React.Component {
                   <span className="refund_cost">환불불가</span>
                 </li>
               </ul>
-              {/* <div className="map_box">
-                <div className="map_text">
-                  <p className="map_title">발리와</p>
-                  <p className="map_adress">
-                    서울 강남구 압구정로10길 30-8 2층 발리와
-                  </p>
-                </div>
-                <div className="map_view"></div>
-              </div> */}
               <div className="review_container">
                 <div className="review_text">
                   <h4 id="list5" className="text_title">

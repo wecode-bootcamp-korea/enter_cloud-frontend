@@ -63,7 +63,7 @@ class Details extends React.Component {
       detailsReviewData,
       detailsReservationData,
     } = this.state;
-    console.log('제발나와바 ', this.state);
+
     return (
       <div className="Details">
         <Nav />
