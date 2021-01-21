@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
 import "./Recommend.scss";
 
 class Recommend extends React.Component {
@@ -10,13 +11,19 @@ class Recommend extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/Data/RecommendData/RecommendData.json")
+    fetch("/Data/RecommendData/spaceMainData.json", {
+      method:'GET'
+    }) 
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          recommendData: res.data,
+          recommendData : res.space_card,
         });
       });
+  }
+
+  toDetail = (id) => {
+    this.props.history.push(`/Details/${id}`);
   }
 
   render() {
@@ -24,11 +31,11 @@ class Recommend extends React.Component {
       <div className="recommend">
             <span>오늘의 추천공간</span>
         <section>
-          {this.state.recommendData.map((recommendCard) => {
+          {this.state.recommendData && this.state.recommendData.map((recommendCard) => {
             return (
-              <div className="recommend_card" key={recommendCard.id}>
+              <div className="recommend_card" key={recommendCard.id} onClick={() => this.toDetail(recommendCard.id)}>
                 <div className="recommend_img">
-                  <img alt="추천공간이미지" src={recommendCard.imgsrc} />
+                  <img alt="추천공간이미지" src={recommendCard.main_image} />
                 </div>
                 <div className="recommend_content">
                   <div className="recommend_content_top">
@@ -57,4 +64,4 @@ class Recommend extends React.Component {
   }
 }
 
-export default Recommend;
+export default withRouter(Recommend);

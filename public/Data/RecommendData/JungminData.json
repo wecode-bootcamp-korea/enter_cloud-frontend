@@ -1,0 +1,125 @@
+{
+  "results":[
+    {
+      "id" : 1,
+      "name" : "[할인,클럽조명]위코드스튜디오",
+      "main_image": "https://images.unsplash.com/photo-1524061662617-6a29d732e3ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fHN0dWRpbyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "location": "동작구",
+      "host": "안k",
+      "tags": [
+        "#강남역강의장",
+        "#강남역세미나실",
+        "#회의실",
+        "#수업"
+      ],
+      "sub_image": [
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+      ],
+      "max_people": 9,
+      "price": 10000,
+      "review" : 1
+  },
+  {
+    "id" : 2,
+    "name" : "[할인,클럽조명]위코드스튜디오",
+    "main_image": "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "location": "동작구",
+    "host": "안k",
+    "tags": [
+      "#강남역강의장",
+      "#강남역세미나실",
+      "#회의실",
+      "#수업"
+    ],
+    "sub_image": [
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+    ],
+    "max_people": 9,
+    "price": 10000,
+    "review" : 1
+},    {
+  "name" : "[할인,클럽조명]위코드스튜디오",
+  "main_image": "https://images.unsplash.com/photo-1524061662617-6a29d732e3ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fHN0dWRpbyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "location": "동작구",
+  "host": "안k",
+  "tags": [
+    "#강남역강의장",
+    "#강남역세미나실",
+    "#회의실",
+    "#수업"
+  ],
+  "sub_image": [
+    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+  ],
+  "max_people": 9,
+  "price": 10000,
+  "review" : 1
+},
+{
+  "name" : "[할인,클럽조명]위코드스튜디오",
+  "main_image": "https://images.unsplash.com/photo-1524061662617-6a29d732e3ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fHN0dWRpbyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "location": "동작구",
+  "host": "안k",
+  "tags": [
+    "#강남역강의장",
+    "#강남역세미나실",
+    "#회의실",
+    "#수업"
+  ],
+  "sub_image": [
+    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+  ],
+  "max_people": 9,
+  "price": 10000,
+  "review" : 1
+},
+{
+  "name" : "[할인,클럽조명]위코드스튜디오",
+  "main_image": "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  "location": "동작구",
+  "host": "안k",
+  "tags": [
+    "#강남역강의장",
+    "#강남역세미나실",
+    "#회의실",
+    "#수업"
+  ],
+  "sub_image": [
+    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+  ],
+  "max_people": 9,
+  "price": 10000,
+  "review" : 1
+},
+{
+  "name" : "[할인,클럽조명]위코드스튜디오",
+  "main_image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "location": "동작구",
+  "host": "안k",
+  "tags": [
+    "#강남역강의장",
+    "#강남역세미나실",
+    "#회의실",
+    "#수업"
+  ],
+  "sub_image": [
+    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1492891651366-a5c2839dc64b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1509566393488-f7eb8dfc1a1f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+  ],
+  "max_people": 9,
+  "price": 10000,
+  "review" : 1
+}
+]
+}
