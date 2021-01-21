@@ -1,0 +1,30 @@
+{
+  "review_card": [
+    {
+    "name": "위위스터디 신촌점 (스터디룸)",
+    "content": "시설이 굉장히 깔끔하고 정성스럽게 꾸며진 장소라 만족스럽게 사용했습니다. 자주 애용할게요!",
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1603430416744-a47cee46b0ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nzd8fGNvbmZlcmVuY2UlMjByb29tfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "price": 10000,
+      "types": [
+        "#스터디룸",
+        "#클래스",
+        "#모임공간",
+        "#회의실"
+      ]
+  },
+  {
+    "name": "위위스터디 신촌점 (스터디룸)",
+    "content": "시설이 굉장히 깔끔하고 정성스럽게 꾸며진 장소라 만족스럽게 사용했습니다. 자주 애용할게요!",
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1603430416744-a47cee46b0ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nzd8fGNvbmZlcmVuY2UlMjByb29tfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+    "price": 20000,
+      "types": [
+        "#스터디룸",
+        "#클래스",
+        "#모임공간",
+        "#회의실"
+      ]
+  }
+]
+}
