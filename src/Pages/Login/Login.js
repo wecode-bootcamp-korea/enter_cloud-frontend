@@ -1,22 +1,22 @@
-import React from "react";
-import Nav from "../../Components/Nav/Nav";
-import SocialLogin from "../../Components/SocialLogin/SocialLogin";
-import "./Login.scss";
+import React from 'react';
+import Nav from '../../Components/Nav/Nav';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
+import './Login.scss';
 
 export class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      email: "",
-      password: "",
-      emailValidation: "",
-      pwValidation: "",
+      email: '',
+      password: '',
+      emailValidation: '',
+      pwValidation: '',
       showBox: false,
     };
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = "#f6f6f6";
+    document.body.style.backgroundColor = '#f6f6f6';
   }
 
   handleLoginInfo = e => {
@@ -32,8 +32,8 @@ export class Login extends React.Component {
     const checkPw = password;
 
     this.setState({
-      emailValidation: !checkEmail ? "이메일을 입력해주세요." : "",
-      pwValidation: !checkPw ? "비밀번호를 입력해주세요." : "",
+      emailValidation: !checkEmail ? '이메일을 입력해주세요.' : '',
+      pwValidation: !checkPw ? '비밀번호를 입력해주세요.' : '',
     });
 
     if (checkEmail && checkPw) {
@@ -52,8 +52,8 @@ export class Login extends React.Component {
 
   handleLoginClick = () => {
     const { email, password } = this.state;
-    fetch("API", {
-      method: "POST",
+    fetch('API', {
+      method: 'POST',
       body: JSON.stringify({
         username: email,
         password: password,
@@ -61,9 +61,9 @@ export class Login extends React.Component {
     })
       .then(response => response.json())
       .then(response => {
-        if (response.message === "SUCCESS") {
-          localStorage.setItem("token", response.access_token);
-          this.props.history.push("/Main");
+        if (response.message === 'SUCCESS') {
+          localStorage.setItem('token', response.access_token);
+          this.props.history.push('/Main');
         }
       });
   };
@@ -80,7 +80,7 @@ export class Login extends React.Component {
       <>
         <Nav />
         <main className="Login common_wrap">
-          <div className={`alert_box ${showBox ? "show" : ""}`}>
+          <div className={`alert_box ${showBox ? 'show' : ''}`}>
             아이디 또는 비밀번호를 확인해주세요.
           </div>
           <h2>로그인</h2>
