@@ -1,0 +1,58 @@
+{
+  "data":[
+    {
+    "id":1,
+    "name":"데이즈 스튜디오",
+    "price":"30000",
+    "location" : "성산동",
+    "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160499442_847fb536369e3d0b673f431e5712bb0a.jpg?type=m&w=900&h=900&autorotate=true&quality=90",
+    "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+    },
+    {
+      "id":2,
+      "name":"발리와",
+      "price":"33000",
+      "location":"신사동",
+      "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160500569_71107cd476160fb67c588f9c405c0337.jpg?type=m&w=900&h=900&autorotate=true&quality=90",
+      "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+      },
+      {"id":3,
+      "name":"모던빈티지",
+      "price":"44000",
+      "location" : "정발산동",
+      "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160501670_4aeabf05cd611467bb814a52f4f5dbee.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
+      "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+      },
+      {"id":4,
+        "name":"모던빈티지",
+        "price":"44000",
+        "location" : "정발산동",
+        "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160501670_4aeabf05cd611467bb814a52f4f5dbee.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
+        "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+        },
+        {
+          "id":5,
+          "name":"발리와",
+          "price":"33000",
+          "location":"신사동",
+          "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160500569_71107cd476160fb67c588f9c405c0337.jpg?type=m&w=900&h=900&autorotate=true&quality=90",
+          "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+          },
+          {
+            "id":6,
+            "name":"발리와",
+            "price":"33000",
+            "location":"신사동",
+            "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160500569_71107cd476160fb67c588f9c405c0337.jpg?type=m&w=900&h=900&autorotate=true&quality=90",
+            "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+            },
+            {
+              "id":2,
+              "name":"발리와",
+              "price":"33000",
+              "location":"신사동",
+              "imgsrc":"https://moplqfgeemqv2103108.cdn.ntruss.com/service/160500569_71107cd476160fb67c588f9c405c0337.jpg?type=m&w=900&h=900&autorotate=true&quality=90",
+              "tags":["단독주택", "분수대", "렌탈스튜디오", "자연광스튜디오"]
+              }
+  ]
+}

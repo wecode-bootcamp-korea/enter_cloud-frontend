@@ -1,0 +1,21 @@
+  .slide{
+    margin-top: 78px;
+  }
+  .main_category{
+    background-color: #f6f6f6;
+    
+      .main_category_wrap1{
+        display: flex;
+        flex-direction: column;
+        align-items :center;
+        justify-content: center;
+        padding:20px;
+        }
+  }
+
+  .main_review{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 400px;
+  }
