@@ -1,31 +1,17 @@
 import React from 'react';
-import { listItem, refund, fixImg } from './contentFixData';
+import { listItem, refund, fixImg, reviewLike } from './contentFixData';
 import './Contentlist.scss';
 
 class Contentlist extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       listItem: [],
       refund: [],
-      contentData: [],
-      reviewData: [],
     };
   }
 
   componentDidMount() {
-    fetch('http://10.58.4.13:8000/spaces/1')
-      .then(data => data.json())
-      .then(data => this.setState({ contentData: data.main[0] }));
-
-    fetch('http://10.58.4.13:8000/reviews/1')
-      .then(data => data.json())
-      .then(data =>
-        this.setState({
-          reviewData: data.review_data,
-        })
-      );
-
     this.setState({ listItem: listItem, refund: refund });
   }
 
@@ -39,8 +25,8 @@ class Contentlist extends React.Component {
       break_days,
       facilities_informations,
       reservation_notes,
-    } = this.state.contentData;
-    const { reviewData } = this.state;
+    } = this.props.detailsData;
+    const { detailsReviewData } = this.props;
     const { listItem, refund } = this.state;
     return (
       <div className="Contentlist">
@@ -162,8 +148,8 @@ class Contentlist extends React.Component {
                 </div>
                 <div className="review_box">
                   <ul className="review_list">
-                    {reviewData &&
-                      reviewData.map(ele => {
+                    {detailsReviewData &&
+                      detailsReviewData.map(ele => {
                         return (
                           <li>
                             <img
@@ -179,13 +165,13 @@ class Contentlist extends React.Component {
                               </div>
                               <ul className="like_box">
                                 <li>
-                                  <img alt="like" src="./images/star.svg" />
+                                  <img alt="like" src="/images/star.svg" />
                                 </li>
                                 <li>
-                                  <img alt="like" src="./images/star.svg" />
+                                  <img alt="like" src="/images/star.svg" />
                                 </li>
                                 <li>
-                                  <img alt="like" src="./images/star.svg" />
+                                  <img alt="like" src="/images/star.svg" />
                                 </li>
                               </ul>
                             </div>

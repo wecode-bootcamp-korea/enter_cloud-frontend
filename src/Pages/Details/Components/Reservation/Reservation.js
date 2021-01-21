@@ -3,11 +3,9 @@ import './Reservation.scss';
 import ReservationList from './ReservationList/ReservationList';
 
 class Reservation extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      acceptData: [],
-      reservationData: [],
       peopleCount: 1,
       buttonOption: 0,
     };
@@ -31,18 +29,10 @@ class Reservation extends React.Component {
   handleOptionChange = e => {
     this.setState({ buttonOption: e.target.value, peopleCount: 1 });
   };
-  componentDidMount() {
-    fetch('http://10.58.4.13:8000/spaces/1')
-      .then(res => res.json())
-      .then(res =>
-        this.setState({
-          reservationData: res.detail,
-        })
-      );
-  }
 
   render() {
-    const { reservationData, buttonOption, peopleCount } = this.state;
+    const { buttonOption, peopleCount } = this.state;
+    const { detailsReservationData } = this.props;
     const {
       handleOptionChange,
       decreasePeopleCount,
@@ -58,11 +48,11 @@ class Reservation extends React.Component {
             <img
               className="icon_upload"
               alt="upload"
-              src="./images/upload.svg"
+              src="/images/upload.svg"
             />
           </a>
           <a href="/">
-            <img className="icon_heart" alt="heart" src="./images/heart.svg" />
+            <img className="icon_heart" alt="heart" src="/images/heart.svg" />
           </a>
         </div>
         <div className="reservation_body">
@@ -72,7 +62,7 @@ class Reservation extends React.Component {
             </p>
           </div>
           <ReservationList
-            reservationData={reservationData}
+            detailsReservationData={detailsReservationData}
             buttonOption={buttonOption}
             handleOptionChange={handleOptionChange}
             decreasePeopleCount={decreasePeopleCount}
@@ -81,7 +71,7 @@ class Reservation extends React.Component {
           />
         </div>
         <div className="reservation_button">
-          <img alt="call" src="./images/phone-call.svg" />
+          <img alt="call" src="/images/phone-call.svg" />
           <button className="call">전화</button>
           <button className="now">바로 예약하기</button>
         </div>

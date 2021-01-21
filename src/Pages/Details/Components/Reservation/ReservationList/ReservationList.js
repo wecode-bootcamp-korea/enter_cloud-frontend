@@ -9,7 +9,7 @@ class ReservationList extends React.Component {
 
   render() {
     const {
-      reservationData,
+      detailsReservationData,
       buttonOption,
       handleOptionChange,
       decreasePeopleCount,
@@ -18,8 +18,8 @@ class ReservationList extends React.Component {
     } = this.props;
     return (
       <ul className="reservation_list">
-        {reservationData &&
-          reservationData.map(ele => {
+        {detailsReservationData &&
+          detailsReservationData.map(ele => {
             const isChecked = ele.id === Number(buttonOption);
             // 위에줄 typeOf 확인
             console.log('여기가 확인', isChecked, typeof ele.id);

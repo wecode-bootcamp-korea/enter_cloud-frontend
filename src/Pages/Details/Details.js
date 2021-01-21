@@ -8,30 +8,40 @@ import Nav from '../../Components/Nav/Nav';
 
 class Details extends React.Component {
   state = {
-    data: {},
+    detailsData: [],
+    detailsReservationData: [],
+    detailsReviewData: [],
   };
 
   componentDidMount() {
-    fetch(`http://10.58.4.13:8000/spaces/${this.props.match.params.id}`)
-      .then(res => res.json())
-      .then(res => this.setState({ data: res }));
-
-    fetch(`http://10.58.4.13:8000/reviews/${this.props.match.params.id}`)
-      .then(res => res.json())
-      .then(res => this.setState({ data: res }));
+    console.log('컨디마실행');
+    this.getSpaceData();
+    this.getSpaceReviewData();
   }
 
   componentDidUpdate(prevProps, _) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
-      fetch(`http://10.58.4.13:8000/spaces/${this.props.match.params.id}`)
-        .then(res => res.json())
-        .then(res => this.setState({ data: res }));
-
-      fetch(`http://10.58.4.13:8000/reviews/${this.props.match.params.id}`)
-        .then(res => res.json())
-        .then(res => this.setState({ data: res }));
+      this.getSpaceData();
+      this.getSpaceReviewData();
     }
   }
+
+  getSpaceData = () => {
+    fetch(`http://15.164.219.219:8000/spaces/${this.props.match.params.id}`)
+      .then(res => res.json())
+      .then(res =>
+        this.setState({
+          detailsData: res.main[0],
+          detailsReservationData: res.detail,
+        })
+      );
+  };
+
+  getSpaceReviewData = () => {
+    fetch(`http://15.164.219.219:8000/reviews/${this.props.match.params.id}`)
+      .then(res => res.json())
+      .then(res => this.setState({ detailsReviewData: res.review_data }));
+  };
 
   goTOMainPage = () => {
     this.props.history.push('/');
@@ -48,16 +58,24 @@ class Details extends React.Component {
   };
 
   render() {
-    console.log(this.props);
+    const {
+      detailsData,
+      detailsReviewData,
+      detailsReservationData,
+    } = this.state;
+    console.log('제발나와바 ', this.state);
     return (
       <div className="Details">
         <Nav />
         <main className="detail_wraper">
           <section className="left">
-            <Headline />
-            <Contentlist />
+            <Headline detailsData={detailsData} />
+            <Contentlist
+              detailsData={detailsData}
+              detailsReviewData={detailsReviewData}
+            />
           </section>
-          <Reservation />
+          <Reservation detailsReservationData={detailsReservationData} />
         </main>
       </div>
     );

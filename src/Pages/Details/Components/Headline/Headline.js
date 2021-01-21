@@ -2,21 +2,14 @@ import React from 'react';
 import './Headline.scss';
 
 class Headline extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      headData: [],
-    };
-  }
-
-  componentDidMount() {
-    fetch('http://10.58.4.13:8000/spaces/1')
-      .then(data => data.json())
-      .then(data => this.setState({ headData: data.main[0] }));
-  }
-
   render() {
-    const { name, simple_information, main_image, tags } = this.state.headData;
+    const {
+      name,
+      simple_information,
+      tags,
+      main_image,
+    } = this.props.detailsData;
+    console.log(this.props.detailsData);
     return (
       <section className="Headline">
         <div className="headlineSpace">
