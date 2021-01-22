@@ -140,7 +140,7 @@ class SignUp extends React.Component {
       }, 2000);
     }
     if (checkedService === true && checkedPrivacy === true) {
-      fetch('http://10.58.3.51:8000/user/signup', {
+      fetch('http://15.164.219.219:8000/user/signup', {
         method: 'POST',
         body: JSON.stringify({
           username: email,

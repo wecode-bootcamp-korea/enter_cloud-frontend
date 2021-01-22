@@ -4,7 +4,7 @@ import '../../Styles/Common.scss';
 import Headline from './Components/Headline/Headline';
 import Contentlist from './Components/Contentlist/Contentlist';
 import Reservation from './Components/Reservation/Reservation';
-import Nav from '../../Components/Nav/Nav';
+import Footer from '../Main/Components/Footer/Footer';
 
 class Details extends React.Component {
   state = {
@@ -66,7 +66,6 @@ class Details extends React.Component {
 
     return (
       <div className="Details">
-        <Nav />
         <main className="detail_wraper">
           <section className="left">
             <Headline detailsData={detailsData} />

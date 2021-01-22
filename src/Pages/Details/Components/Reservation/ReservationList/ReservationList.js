@@ -1,5 +1,5 @@
-import React from 'react';
-import './ReservationList.scss';
+import React from "react";
+import "./ReservationList.scss";
 
 class ReservationList extends React.Component {
   constructor(props) {
@@ -19,10 +19,10 @@ class ReservationList extends React.Component {
     return (
       <ul className="reservation_list">
         {detailsReservationData &&
-          detailsReservationData.map(ele => {
+          detailsReservationData.map((ele) => {
             const isChecked = ele.id === Number(buttonOption);
             // 위에줄 typeOf 확인
-            console.log('여기가 확인', isChecked, typeof ele.id);
+            console.log("여기가 확인", isChecked, typeof ele.id);
             return (
               <li>
                 <div className="flex_box">
@@ -47,7 +47,7 @@ class ReservationList extends React.Component {
                       <li>
                         <span className="room_style">공간유형</span>
                         {ele.types &&
-                          ele.types.map(type => {
+                          ele.types.map((type) => {
                             return <span className="room_data">{type} </span>;
                           })}
                       </li>
@@ -66,7 +66,7 @@ class ReservationList extends React.Component {
                     </ul>
                     <div className="facility_wrap">
                       <ul className="facility_list">
-                        {ele.facilities.map(data => (
+                        {ele.facilities.map((data) => (
                           <li key={data.id}>
                             <i className={data.type}></i>
                             <span>{data.name}</span>

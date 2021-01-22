@@ -1,13 +1,16 @@
-import React from 'react';
-import SlideMenu from '../SlideMenu/SlideMenu';
-import './Nav.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import SlideMenu from "../SlideMenu/SlideMenu";
+import "./Nav.scss";
 
 export class Nav extends React.Component {
   render() {
     return (
       <nav className="Nav">
         <section>
-          <h1>EnterCloud</h1>
+          <h1>
+            <Link to="/">EnterCloud</Link>
+          </h1>
           <div className="search_wr">
             <input
               type="text"
@@ -17,10 +20,10 @@ export class Nav extends React.Component {
           </div>
           <ul>
             <li>
-              <a href="#none">공간 등록하기</a>
+              <Link to="/Login">로그인</Link>
             </li>
             <li>
-              <a href="#none">기획전</a>
+              <Link to="/SignUp">회원가입</Link>
             </li>
           </ul>
           <SlideMenu />

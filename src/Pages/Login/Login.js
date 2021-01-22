@@ -53,7 +53,7 @@ class Login extends React.Component {
 
   handleLoginClick = () => {
     const { email, password } = this.state;
-    fetch('http://10.58.3.51:8000/user/signin', {
+    fetch('http://15.164.219.219:8000/user/signin', {
       method: 'POST',
       body: JSON.stringify({
         username: email,
