@@ -1,16 +1,16 @@
 /* eslint-disable no-useless-escape */
-import React from 'react';
-import SocialLogin from '../../Components/SocialLogin/SocialLogin';
-import './SignUp.scss';
+import React from "react";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import "./SignUp.scss";
 
 export class SignUp extends React.Component {
   constructor() {
     super();
     this.state = {
-      nickname: '',
-      email: '',
-      password: '',
-      repassword: '',
+      nickname: "",
+      email: "",
+      password: "",
+      repassword: "",
       isValid: false,
       checkedAll: false,
       checkedService: false,
@@ -22,10 +22,10 @@ export class SignUp extends React.Component {
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = '#f6f6f6';
+    document.body.style.backgroundColor = "#f6f6f6";
   }
 
-  handleSignUpInfo = e => {
+  handleSignUpInfo = (e) => {
     const { id, value } = e.target;
     this.setState({ [id]: value });
   };
@@ -139,8 +139,8 @@ export class SignUp extends React.Component {
       }, 2000);
     }
     if (checkedService === true && checkedPrivacy === true) {
-      fetch('api', {
-        method: 'POST',
+      fetch("http://15.164.219.219:8000/user/signup", {
+        method: "POST",
         body: JSON.stringify({
           username: email,
           password: password,
@@ -151,11 +151,11 @@ export class SignUp extends React.Component {
           checkedEmail: checkedEmail,
         }),
       })
-        .then(res => res.json())
-        .then(res => {
-          if (res.message === 'SUCCESS') {
-            alert('엔터 클라우드에 오신 걸 환영합니다!');
-            this.props.history.push('/Login');
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.message === "SUCCESS") {
+            alert("엔터 클라우드에 오신 걸 환영합니다!");
+            this.props.history.push("/Login");
           }
         });
     }
@@ -180,7 +180,7 @@ export class SignUp extends React.Component {
 
     return (
       <main className="SignUp common_wrap">
-        <div className={`alert_box ${this.state.showBox ? 'show' : ''}`}>
+        <div className={`alert_box ${this.state.showBox ? "show" : ""}`}>
           회원가입 약관에 동의하신 후 회원가입이 가능합니다.
         </div>
         <h2>회원가입</h2>
@@ -193,7 +193,7 @@ export class SignUp extends React.Component {
             <input
               id="nickname"
               className={
-                isValid && !nicknameValidation.test(nickname) ? 'error' : ''
+                isValid && !nicknameValidation.test(nickname) ? "error" : ""
               }
               type="text"
               placeholder="닉네임"
@@ -202,15 +202,15 @@ export class SignUp extends React.Component {
             />
             <p className="validation_message">
               {
-                (isValid && !nickname ? '필수 정보입니다.' : '',
+                (isValid && !nickname ? "필수 정보입니다." : "",
                 isValid && !nicknameValidation.test(nickname)
-                  ? '닉네임은 두 글자 이상(특수문자 입력 불가) 입력해주세요.'
-                  : '')
+                  ? "닉네임은 두 글자 이상(특수문자 입력 불가) 입력해주세요."
+                  : "")
               }
             </p>
             <input
               id="email"
-              className={isValid && !emailValidation.test(email) ? 'error' : ''}
+              className={isValid && !emailValidation.test(email) ? "error" : ""}
               type="text"
               placeholder="이메일"
               value={email}
@@ -218,15 +218,15 @@ export class SignUp extends React.Component {
             />
             <p className="validation_message">
               {
-                (isValid && !email ? '필수 정보입니다.' : '',
+                (isValid && !email ? "필수 정보입니다." : "",
                 isValid && !emailValidation.test(email)
-                  ? '이메일 형식이 유효하지 않습니다.'
-                  : '')
+                  ? "이메일 형식이 유효하지 않습니다."
+                  : "")
               }
             </p>
             <input
               id="password"
-              className={isValid && !pwValidation.test(password) ? 'error' : ''}
+              className={isValid && !pwValidation.test(password) ? "error" : ""}
               type="password"
               placeholder="비밀번호"
               value={password}
@@ -235,15 +235,15 @@ export class SignUp extends React.Component {
             />
             <p className="validation_message">
               {
-                (isValid && !password ? '필수 정보입니다.' : '',
+                (isValid && !password ? "필수 정보입니다." : "",
                 isValid && !pwValidation.test(password)
-                  ? '비밀번호에 숫자, 기호를 포함하세요.'
-                  : '')
+                  ? "비밀번호에 숫자, 기호를 포함하세요."
+                  : "")
               }
             </p>
             <input
               id="repassword"
-              className={isValid && repassword !== password ? 'error' : ''}
+              className={isValid && repassword !== password ? "error" : ""}
               type="password"
               placeholder="비밀번호 확인"
               value={repassword}
@@ -253,8 +253,8 @@ export class SignUp extends React.Component {
             <p className="validation_message">
               {rePwvalidationMessage}
               {isValid && repassword !== password
-                ? '비밀번호가 일치하지 않습니다'
-                : ''}
+                ? "비밀번호가 일치하지 않습니다"
+                : ""}
             </p>
           </form>
           <p className="agree_check">

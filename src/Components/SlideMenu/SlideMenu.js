@@ -1,5 +1,5 @@
-import React from 'react';
-import './SlideMenu.scss';
+import React from "react";
+import "./SlideMenu.scss";
 
 export class SlideMenu extends React.Component {
   render() {

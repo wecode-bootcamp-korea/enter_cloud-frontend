@@ -1,6 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import './Recommend.scss';
+import React from "react";
+import { withRouter } from "react-router-dom";
+import "./Recommend.scss";
 
 class Recommend extends React.Component {
   constructor() {
@@ -11,18 +11,18 @@ class Recommend extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/Data/RecommendData/spaceMainData.json', {
-      method: 'GET',
+    fetch("/Data/RecommendData/spaceMainData.json", {
+      method: "GET",
     })
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({
           recommendData: res.space_card,
         });
       });
   }
 
-  toDetail = id => {
+  toDetail = (id) => {
     this.props.history.push(`/Details/${id}`);
   };
 
@@ -32,7 +32,7 @@ class Recommend extends React.Component {
         <span>오늘의 추천공간</span>
         <section>
           {this.state.recommendData &&
-            this.state.recommendData.map(recommendCard => {
+            this.state.recommendData.map((recommendCard) => {
               return (
                 <div
                   className="recommend_card"
@@ -48,7 +48,7 @@ class Recommend extends React.Component {
                     </div>
                     <div className="recommend_content_mid">
                       <div className="location">{recommendCard.location}</div>
-                      {recommendCard.tags.map(tag => (
+                      {recommendCard.tags.map((tag) => (
                         <span>{tag}</span>
                       ))}
                     </div>
