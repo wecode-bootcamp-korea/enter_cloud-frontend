@@ -1,31 +1,31 @@
-import React from "react";
-import Nav from "../../Components/Nav/Nav";
-import SocialLogin from "../../Components/SocialLogin/SocialLogin";
-import { withRouter } from "react-router-dom";
-import "./Login.scss";
+import React from 'react';
+import Nav from '../../Components/Nav/Nav';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
+import './Login.scss';
+import { withRouter } from 'react-router-dom';
 
-export class Login extends React.Component {
+class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      email: "",
-      password: "",
-      emailValidation: "",
-      pwValidation: "",
+      email: '',
+      password: '',
+      emailValidation: '',
+      pwValidation: '',
       showBox: false,
     };
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = "#f6f6f6";
+    document.body.style.backgroundColor = '#f6f6f6';
   }
 
-  handleLoginInfo = (e) => {
+  handleLoginInfo = e => {
     const { id, value } = e.target;
     this.setState({ [id]: value });
   };
 
-  checkValidation = (e) => {
+  checkValidation = e => {
     e.preventDefault();
 
     const { email, password, showBox } = this.state;
@@ -33,8 +33,8 @@ export class Login extends React.Component {
     const checkPw = password;
 
     this.setState({
-      emailValidation: !checkEmail ? "이메일을 입력해주세요." : "",
-      pwValidation: !checkPw ? "비밀번호를 입력해주세요." : "",
+      emailValidation: !checkEmail ? '이메일을 입력해주세요.' : '',
+      pwValidation: !checkPw ? '비밀번호를 입력해주세요.' : '',
     });
 
     if (checkEmail && checkPw) {
@@ -53,18 +53,18 @@ export class Login extends React.Component {
 
   handleLoginClick = () => {
     const { email, password } = this.state;
-    fetch("http://15.164.219.219:8000/user/signin", {
-      method: "POST",
+    fetch('http://15.164.219.219:8000/user/signin', {
+      method: 'POST',
       body: JSON.stringify({
         username: email,
         password: password,
       }),
     })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.message === "SUCCESS") {
-          localStorage.setItem("token", response.access_token);
-          this.props.history.push("/Main");
+      .then(response => response.json())
+      .then(response => {
+        if (response.message === 'SUCCESS') {
+          localStorage.setItem('token', response.access_token);
+          this.props.history.push('/');
         }
       });
   };
@@ -81,7 +81,7 @@ export class Login extends React.Component {
       <>
         <Nav />
         <main className="Login common_wrap">
-          <div className={`alert_box ${showBox ? "show" : ""}`}>
+          <div className={`alert_box ${showBox ? 'show' : ''}`}>
             아이디 또는 비밀번호를 확인해주세요.
           </div>
           <h2>로그인</h2>

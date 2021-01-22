@@ -1,10 +1,10 @@
-import React from "react";
-import "./Details.scss";
-import "../../Styles/Common.scss";
-import Headline from "./Components/Headline/Headline";
-import Contentlist from "./Components/Contentlist/Contentlist";
-import Reservation from "./Components/Reservation/Reservation";
-import Footer from "../Main/Components/Footer/Footer";
+import React from 'react';
+import './Details.scss';
+import '../../Styles/Common.scss';
+import Headline from './Components/Headline/Headline';
+import Contentlist from './Components/Contentlist/Contentlist';
+import Reservation from './Components/Reservation/Reservation';
+import Footer from '../Main/Components/Footer/Footer';
 
 class Details extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class Details extends React.Component {
   };
 
   componentDidMount() {
-    console.log("컨디마실행");
+    console.log('컨디마실행');
     this.getSpaceData();
     this.getSpaceReviewData();
   }
@@ -28,8 +28,8 @@ class Details extends React.Component {
 
   getSpaceData = () => {
     fetch(`http://15.164.219.219:8000/spaces/${this.props.match.params.id}`)
-      .then((res) => res.json())
-      .then((res) =>
+      .then(res => res.json())
+      .then(res =>
         this.setState({
           detailsData: res.main[0],
           detailsReservationData: res.detail,
@@ -39,12 +39,12 @@ class Details extends React.Component {
 
   getSpaceReviewData = () => {
     fetch(`http://15.164.219.219:8000/reviews/${this.props.match.params.id}`)
-      .then((res) => res.json())
-      .then((res) => this.setState({ detailsReviewData: res.review_data }));
+      .then(res => res.json())
+      .then(res => this.setState({ detailsReviewData: res.review_data }));
   };
 
   goTOMainPage = () => {
-    this.props.history.push("/");
+    this.props.history.push('/');
   };
 
   goTOPreviousPage = () => {

@@ -1,6 +1,6 @@
-import React from "react";
-import { listItem, refund, fixImg } from "./contentFixData";
-import "./Contentlist.scss";
+import React from 'react';
+import { listItem, refund, fixImg } from './contentFixData';
+import './Contentlist.scss';
 
 class Contentlist extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class Contentlist extends React.Component {
         <section className="left">
           <div className="left_list">
             <ul className="list_click">
-              {listItem.map((listItemData) => {
+              {listItem.map(listItemData => {
                 return (
                   <li key={listItemData.id}>
                     <a href={listItemData.href}>{listItemData.name}</a>
@@ -56,7 +56,7 @@ class Contentlist extends React.Component {
                 <li className="host_holiday">
                   <span className="host_sub_day">휴무일</span>
                   {break_days &&
-                    break_days.map((day) => {
+                    break_days.map(day => {
                       return <span className="host_day">{day}요일 </span>;
                     })}
                 </li>
@@ -106,7 +106,7 @@ class Contentlist extends React.Component {
                 전까지만 가능)
               </p>
               <ul className="third_list">
-                {refund.map((refundData) => {
+                {refund.map(refundData => {
                   return (
                     <li key={refundData.id}>
                       <span className="refund_day">
@@ -140,7 +140,7 @@ class Contentlist extends React.Component {
                 <div className="review_box">
                   <ul className="review_list">
                     {detailsReviewData &&
-                      detailsReviewData.map((ele) => {
+                      detailsReviewData.map(ele => {
                         return (
                           <li>
                             <img
