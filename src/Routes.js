@@ -21,7 +21,7 @@ class Routes extends React.Component {
           <Route exact path="/Details/:id" component={Details} />
           <Route exact path="/Lists" component={Lists} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     );
   }

@@ -76,9 +76,6 @@ class Details extends React.Component {
           </section>
           <Reservation detailsReservationData={detailsReservationData} />
         </main>
-        <div>
-          <Footer />
-        </div>
       </div>
     );
   }
