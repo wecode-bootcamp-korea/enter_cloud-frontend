@@ -27,6 +27,7 @@ export class Main extends React.Component {
         </section>
         <section className="main_review">
           {/* <Userreview /> */}
+          <span>이용자 리뷰</span>
           <Userslide />
         </section>
       </div>

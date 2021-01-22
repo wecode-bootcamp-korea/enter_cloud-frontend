@@ -1,11 +1,11 @@
-import React from "react";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./Userslide.scss";
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/scrollbar/scrollbar.scss";
+import React from 'react';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import './Userslide.scss';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 export class Userslide extends React.Component {
   constructor() {
@@ -16,9 +16,9 @@ export class Userslide extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://15.164.219.219:8000/reviews", { method: "GET" })
-      .then((res) => res.json())
-      .then((res) => {
+    fetch('http://15.164.219.219:8000/reviews', { method: 'GET' })
+      .then(res => res.json())
+      .then(res => {
         this.setState({
           userData: res.review_card,
         });
@@ -39,7 +39,7 @@ export class Userslide extends React.Component {
                     className="review_img"
                     src={userreview.image_url}
                   />
-                  {userreview.types.map((type) => (
+                  {userreview.types.map(type => (
                     <span>{type}</span>
                   ))}
                   <div className="name">{userreview.name}</div>
