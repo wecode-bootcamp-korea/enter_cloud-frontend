@@ -1,5 +1,5 @@
-import React from 'react';
-import './Headline.scss';
+import React from "react";
+import "./Headline.scss";
 
 class Headline extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class Headline extends React.Component {
           <p>{simple_information}</p>
           <ul>
             {tags &&
-              tags.map(tag => {
+              tags.map((tag) => {
                 return <li key={tag.id}>{tag}</li>;
               })}
           </ul>

@@ -1,6 +1,6 @@
-import React from 'react';
-import './Reservation.scss';
-import ReservationList from './ReservationList/ReservationList';
+import React from "react";
+import "./Reservation.scss";
+import ReservationList from "./ReservationList/ReservationList";
 
 class Reservation extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Reservation extends React.Component {
     };
   }
 
-  increasePeopleCount = maxPeople => {
+  increasePeopleCount = (maxPeople) => {
     console.log(maxPeople);
     if (this.state.peopleCount >= maxPeople) {
       return null;
@@ -26,7 +26,7 @@ class Reservation extends React.Component {
     this.setState({ peopleCount: this.state.peopleCount - 1 });
   };
   //동치와 일치
-  handleOptionChange = e => {
+  handleOptionChange = (e) => {
     this.setState({ buttonOption: e.target.value, peopleCount: 1 });
   };
 

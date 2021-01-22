@@ -1,13 +1,12 @@
-import React from 'react';
-import 'react-router-dom';
-import Nav from '../../Components/Nav/Nav';
-import Slide from './Components/Slide/Slide';
-import Category from './Components/Category/Category';
-import Recommend from './Components/Recommned/Recommend';
+import React from "react";
+import "react-router-dom";
+import Nav from "../../Components/Nav/Nav";
+import Slide from "./Components/Slide/Slide";
+import Category from "./Components/Category/Category";
+import Recommend from "./Components/Recommned/Recommend";
 // import Userreview from "./Components/Userreview/Userreview";
-import Userslide from './Components/Userslide/Userslide';
-import Footer from './Components/Footer/Footer';
-import './Main.scss';
+import Userslide from "./Components/Userslide/Userslide";
+import "./Main.scss";
 
 export class Main extends React.Component {
   render() {
@@ -30,7 +29,6 @@ export class Main extends React.Component {
           {/* <Userreview /> */}
           <Userslide />
         </section>
-        <Footer />
       </div>
     );
   }
