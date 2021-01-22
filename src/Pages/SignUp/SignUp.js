@@ -2,8 +2,9 @@
 import React from 'react';
 import SocialLogin from '../../Components/SocialLogin/SocialLogin';
 import './SignUp.scss';
+import { withRouter } from 'react-router-dom';
 
-export class SignUp extends React.Component {
+class SignUp extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -139,7 +140,7 @@ export class SignUp extends React.Component {
       }, 2000);
     }
     if (checkedService === true && checkedPrivacy === true) {
-      fetch('api', {
+      fetch('http://10.58.3.51:8000/user/signup', {
         method: 'POST',
         body: JSON.stringify({
           username: email,
@@ -326,3 +327,5 @@ export class SignUp extends React.Component {
     );
   }
 }
+
+export default withRouter(SignUp);

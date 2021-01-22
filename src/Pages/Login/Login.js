@@ -2,8 +2,9 @@ import React from 'react';
 import Nav from '../../Components/Nav/Nav';
 import SocialLogin from '../../Components/SocialLogin/SocialLogin';
 import './Login.scss';
+import { withRouter } from 'react-router-dom';
 
-export class Login extends React.Component {
+class Login extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -52,7 +53,7 @@ export class Login extends React.Component {
 
   handleLoginClick = () => {
     const { email, password } = this.state;
-    fetch('API', {
+    fetch('http://10.58.3.51:8000/user/signin', {
       method: 'POST',
       body: JSON.stringify({
         username: email,
@@ -63,7 +64,7 @@ export class Login extends React.Component {
       .then(response => {
         if (response.message === 'SUCCESS') {
           localStorage.setItem('token', response.access_token);
-          this.props.history.push('/Main');
+          this.props.history.push('/');
         }
       });
   };
@@ -125,4 +126,4 @@ export class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
