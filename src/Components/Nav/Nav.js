@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import SlideMenu from "../SlideMenu/SlideMenu";
-import "./Nav.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SlideMenu from '../SlideMenu/SlideMenu';
+import './Nav.scss';
 
 export class Nav extends React.Component {
   render() {

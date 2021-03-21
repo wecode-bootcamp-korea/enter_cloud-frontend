@@ -27,7 +27,7 @@ class Details extends React.Component {
   }
 
   getSpaceData = () => {
-    fetch(`http://15.164.219.219:8000/spaces/${this.props.match.params.id}`)
+    fetch('/data/Details.json')
       .then(res => res.json())
       .then(res =>
         this.setState({
@@ -36,9 +36,10 @@ class Details extends React.Component {
         })
       );
   };
-
+  // `http://15.164.219.219:8000/spaces/${this.props.match.params.id}`
+  // `http://15.164.219.219:8000/reviews/${this.props.match.params.id}`
   getSpaceReviewData = () => {
-    fetch(`http://15.164.219.219:8000/reviews/${this.props.match.params.id}`)
+    fetch('/data/DetailsReview.json')
       .then(res => res.json())
       .then(res => this.setState({ detailsReviewData: res.review_data }));
   };
